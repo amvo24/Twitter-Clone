@@ -1,5 +1,5 @@
 from .db import db
-from .posts import Posts
+from .posts import Post
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
 
@@ -12,8 +12,8 @@ class User(db.Model, UserMixin):
     email = db.Column(db.String(255), nullable=False, unique=True)
     hashed_password = db.Column(db.String(255), nullable=False)
 
-    posts = db.relationship("Posts", back_populates="users")
-    comments = db.relationship("Comments", back_populates="users")
+    post = db.relationship("Post", back_populates="user")
+    comments = db.relationship("Comment", back_populates="user")
 
     @property
     def password(self):

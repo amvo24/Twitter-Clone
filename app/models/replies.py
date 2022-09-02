@@ -11,7 +11,7 @@ class Replies(db.Model):
     images = db.Column(db.String, nullable=True)
     comment_id = db.Column(db.Integer, db.ForeignKey("comments.id"))
 
-    comments = db.relationship("Comments", back_populates="replies")
+    comments = db.relationship("Comment", back_populates="replies")
 
 
     def to_dict(self):

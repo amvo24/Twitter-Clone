@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify, request
 from app.api.auth_routes import validation_errors_to_error_messages
-from app.models import db, Posts
+from app.models import db, Post
 from app.forms import PostForm
 from flask_login import login_required
 
@@ -9,7 +9,7 @@ posts_routes = Blueprint('posts', __name__)
 @posts_routes.route('/')
 @login_required
 def get_all_posts():
-    posts = Posts.query.all()
+    posts = Post.query.all()
     return jsonify(posts)
 
 
@@ -19,7 +19,7 @@ def create_post():
     form = PostForm()
     form['csrf_token'].data = request.cookies['csrf_token']
     if form.validate_on_submit():
-        newPost = Posts(
+        newPost = Post(
             body=form.data['body'],
             images=form.data['images']
         )
@@ -32,18 +32,18 @@ def create_post():
 @posts_routes.route('/<id>')
 @login_required
 def get_post_by_id(id):
-    post = Posts.query.get_or_404(id)
+    post = Post.query.get_or_404(id)
     return post.to_dict()
 
 
 @posts_routes.route('/update/<id>', methods=["PUT"])
 @login_required
 def update_post_by_id(id):
-    post = Posts.query.get(id)
+    post = Post.query.get(id)
     form = PostForm()
     form['csrf_token'].data = request.cookies['csrf_token']
     if form.validate_on_submit(post):
-        post = Posts(
+        post = Post(
             body=form.data['body'],
             images=form.data['images']
         )
@@ -55,6 +55,6 @@ def update_post_by_id(id):
 @posts_routes.route('/<id>', methods=["DELETE"])
 @login_required
 def delete_post_by_id(id):
-    post = Posts.query.get_or_404(id)
+    post = Post.query.get_or_404(id)
     db.session.delete(post)
     db.session.commit()

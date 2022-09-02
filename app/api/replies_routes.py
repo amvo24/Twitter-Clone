@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify, request
 from app.api.auth_routes import validation_errors_to_error_messages
-from app.models import db, Posts, Replies
+from app.models import db, Replies
 from app.forms import RepliesForm
 from flask_login import login_required
 

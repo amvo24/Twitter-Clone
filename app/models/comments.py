@@ -1,7 +1,7 @@
 from .db import db
 
 
-class Comments(db.Model):
+class Comment(db.Model):
     __tablename__ = 'comments'
 
     id = db.Column(db.Integer, primary_key=True)
@@ -10,10 +10,10 @@ class Comments(db.Model):
     reposts = db.Column(db.Integer, nullable=True)
     images = db.Column(db.String, nullable=True)
     user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
-    post_id = db.Column(db.Integer, db.ForeignKey("post.id"))
+    post_id = db.Column(db.Integer, db.ForeignKey("posts.id"))
 
-    users = db.relationship("User", back_populates="comments")
-    posts = db.relationship("Posts", back_populates="comments")
+    user = db.relationship("User", back_populates="comments")
+    post = db.relationship("Post", back_populates="comments")
     replies = db.relationship("Replies", back_populates="comments")
 
 

@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify, request
 from app.api.auth_routes import validation_errors_to_error_messages
-from app.models import db, Posts, Comments
+from app.models import db, Comment
 from app.forms import CommentsForm
 from flask_login import login_required
 
@@ -9,7 +9,7 @@ comments_routes = Blueprint('comments', __name__)
 @comments_routes.route('/')
 @login_required
 def get_all_comments():
-    comments = Comments.query.all()
+    comments = Comment.query.all()
     return jsonify(comments)
 
 
@@ -19,7 +19,7 @@ def create_comment():
     form = CommentsForm()
     form['csrf_token'].data = request.cookies['csrf_token']
     if form.validate_on_submit():
-        newComment = Comments(
+        newComment = Comment(
             body=form.data['body'],
             images=form.data['images']
         )
@@ -32,11 +32,11 @@ def create_comment():
 @comments_routes.route('/update/<id>', methods=["PUT"])
 @login_required
 def update_comment_by_id(id):
-    comment = Comments.query.get(id)
+    comment = Comment.query.get(id)
     form = CommentsForm()
     form['csrf_token'].data = request.cookies['csrf_token']
     if form.validate_on_submit(comment):
-        comment = Comments(
+        comment = Comment(
             body=form.data['body'],
             images=form.data['images']
         )
@@ -48,6 +48,6 @@ def update_comment_by_id(id):
 @comments_routes.route('/<id>', methods=["DELETE"])
 @login_required
 def delete_comment_by_id(id):
-    comment = Comments.query.get_or_404(id)
+    comment = Comment.query.get_or_404(id)
     db.session.delete(comment)
     db.session.commit()
