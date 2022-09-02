@@ -3,6 +3,6 @@ from wtforms import StringField
 from wtforms.validators import DataRequired, Email, ValidationError, Length
 
 
-class Replies(FlaskForm):
+class RepliesForm(FlaskForm):
     body = StringField('body', validators=[DataRequired(), Length(min=1, max=140)])
     images = StringField('images')
