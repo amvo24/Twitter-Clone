@@ -13,7 +13,7 @@ def get_all_posts():
     return jsonify(posts)
 
 
-@posts_routes.route('/create', method=["POST"])
+@posts_routes.route('/create', methods=["POST"])
 @login_required
 def create_post():
     form = PostForm()
@@ -36,7 +36,7 @@ def get_post_by_id(id):
     return post.to_dict()
 
 
-@posts_routes.route('/update/<id>', method=["PUT"])
+@posts_routes.route('/update/<id>', methods=["PUT"])
 @login_required
 def update_post_by_id(id):
     post = Posts.query.get(id)
@@ -52,7 +52,7 @@ def update_post_by_id(id):
         return post.to_dict()
 
 
-@posts_routes.route('/<id>', method=["DELETE"])
+@posts_routes.route('/<id>', methods=["DELETE"])
 @login_required
 def delete_post_by_id(id):
     post = Posts.query.get_or_404(id)

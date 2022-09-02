@@ -1,7 +1,7 @@
 from .db import db
 
 
-class Comments(db.model):
+class Comments(db.Model):
     __tablename__ = 'comments'
 
     id = db.Column(db.Integer, primary_key=True)
@@ -12,9 +12,9 @@ class Comments(db.model):
     user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
     post_id = db.Column(db.Integer, db.ForeignKey("post.id"))
 
-    users = db.relationships("User", backpopulates="comments")
-    posts = db.relationships("Posts", backpopulates="comments")
-    replies = db.relationships("Replies", backpopulates="comments")
+    users = db.relationship("User", back_populates="comments")
+    posts = db.relationship("Posts", back_populates="comments")
+    replies = db.relationship("Replies", back_populates="comments")
 
 
     def to_dict(self):

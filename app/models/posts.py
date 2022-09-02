@@ -5,7 +5,7 @@ Consider how retweets and likes will function and perhaps add methods to
 handle them
 """
 
-class Posts(db.model):
+class Posts(db.Model):
     __tablename__ = 'posts'
 
     id = db.Column(db.Integer, primary_key=True)
@@ -15,8 +15,8 @@ class Posts(db.model):
     images = db.Column(db.String, nullable=True)
     user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
 
-    users = db.relationship("User", backpopulates="posts")
-    comments = db.relationship("Comments", backpopulates="posts")
+    users = db.relationship("User", back_populates="posts")
+    comments = db.relationship("Comments", back_populates="posts")
 
 
     def to_dict(self):

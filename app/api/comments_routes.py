@@ -13,7 +13,7 @@ def get_all_comments():
     return jsonify(comments)
 
 
-@comments_routes.route('/create', method=["POST"])
+@comments_routes.route('/create', methods=["POST"])
 @login_required
 def create_comment():
     form = CommentsForm()
@@ -29,7 +29,7 @@ def create_comment():
     return {'errors': validation_errors_to_error_messages(form.errors)}, 401
 
 
-@comments_routes.route('/update/<id>', method=["PUT"])
+@comments_routes.route('/update/<id>', methods=["PUT"])
 @login_required
 def update_comment_by_id(id):
     comment = Comments.query.get(id)
@@ -45,7 +45,7 @@ def update_comment_by_id(id):
         return comment.to_dict()
 
 
-@comments_routes.route('/<id>', method=["DELETE"])
+@comments_routes.route('/<id>', methods=["DELETE"])
 @login_required
 def delete_comment_by_id(id):
     comment = Comments.query.get_or_404(id)

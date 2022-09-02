@@ -1,7 +1,7 @@
 from .db import db
 
 
-class Replies(db.model):
+class Replies(db.Model):
     __tablename__ = 'replies'
 
     id = db.Column(db.Integer, primary_key=True)
@@ -11,7 +11,7 @@ class Replies(db.model):
     images = db.Column(db.String, nullable=True)
     comment_id = db.Column(db.Integer, db.ForeignKey("comments.id"))
 
-    comments = db.relationships("Comments", backpopulates="replies")
+    comments = db.relationship("Comments", back_populates="replies")
 
 
     def to_dict(self):

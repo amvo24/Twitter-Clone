@@ -13,7 +13,7 @@ def get_all_replies():
     return jsonify(replies)
 
 
-@replies_routes.route('/create', method=["POST"])
+@replies_routes.route('/create', methods=["POST"])
 @login_required
 def create_replies():
     form = RepliesForm()
@@ -29,7 +29,7 @@ def create_replies():
     return {'errors': validation_errors_to_error_messages(form.errors)}, 401
 
 
-@replies_routes.route('/update/<id>', method=["PUT"])
+@replies_routes.route('/update/<id>', methods=["PUT"])
 @login_required
 def update_replies_by_id(id):
     replies = Replies.query.get(id)
@@ -45,7 +45,7 @@ def update_replies_by_id(id):
         return replies.to_dict()
 
 
-@replies_routes.route('/<id>', method=["DELETE"])
+@replies_routes.route('/<id>', methods=["DELETE"])
 @login_required
 def delete_replies_by_id(id):
     replies = Replies.query.get_or_404(id)
