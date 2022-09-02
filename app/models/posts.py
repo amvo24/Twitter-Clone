@@ -25,5 +25,6 @@ class Posts(db.model):
             'body': self.body,
             'likes': self.likes,
             'reposts': self.reposts,
-            'images': self.images
+            'images': self.images,
+            'user': self.user.to_dict()
         }
