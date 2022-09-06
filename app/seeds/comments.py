@@ -2,7 +2,7 @@ from app.models import db, Comment
 
 
 # Adds a demo user, you can add other users here if you want
-def seed_Comment():
+def seed_comment():
     demoComment = Comment(
         body='Greetings Marnie, I am demo',
         likes=3, reposts=2,
@@ -28,6 +28,6 @@ def seed_Comment():
 # TRUNCATE Removes all the data from the table, and RESET IDENTITY
 # resets the auto incrementing primary key, CASCADE deletes any
 # dependent entities
-def undo_Comment():
+def undo_comment():
     db.session.execute('TRUNCATE comments RESTART IDENTITY CASCADE;')
     db.session.commit()

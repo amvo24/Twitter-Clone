@@ -10,8 +10,10 @@ class Replies(db.Model):
     reposts = db.Column(db.Integer, nullable=True)
     images = db.Column(db.String, nullable=True)
     comment_id = db.Column(db.Integer, db.ForeignKey("comments.id"))
+    user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
 
     comments = db.relationship("Comment", back_populates="replies")
+    user = db.relationship("User", back_populates="replies")
 
 
     def to_dict(self):
