@@ -109,7 +109,7 @@ export const deleteAPost = (id) => async (dispatch) => {
 
 const initialState = {};
 
-export default function reducer(state = initialState, action) {
+export default function postReducer(state = initialState, action) {
     const newState = {}
 
     switch (action.type) {
