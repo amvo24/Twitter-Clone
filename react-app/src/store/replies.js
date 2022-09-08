@@ -33,7 +33,7 @@ export const getAllreplies = () => async (dispatch) => {
     });
     if (response.ok) {
         const payload = await response.json();
-        if (data.errors) {
+        if (payload.errors) {
             return;
         }
 

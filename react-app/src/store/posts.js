@@ -39,7 +39,7 @@ export const getAllPosts = () => async (dispatch) => {
     });
     if (response.ok) {
         const payload = await response.json();
-        if (data.errors) {
+        if (payload.errors) {
             return;
         }
 
