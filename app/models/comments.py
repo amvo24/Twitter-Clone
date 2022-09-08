@@ -23,5 +23,6 @@ class Comment(db.Model):
             'body': self.body,
             'likes': self.likes,
             'reposts': self.reposts,
-            'images': self.images
+            'images': self.images,
+            'post': self.post.to_dict()
         }

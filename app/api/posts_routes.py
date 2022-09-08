@@ -1,3 +1,4 @@
+from urllib import response
 from flask import Blueprint, jsonify, request
 from app.api.auth_routes import validation_errors_to_error_messages
 from app.models import db, Post
@@ -10,7 +11,8 @@ posts_routes = Blueprint('posts', __name__)
 @login_required
 def get_all_posts():
     posts = Post.query.all()
-    return jsonify(posts)
+    response = [post.to_dict() for post in posts]
+    return {'posts': response}
 
 
 @posts_routes.route('/create', methods=["POST"])
@@ -36,25 +38,26 @@ def get_post_by_id(id):
     return post.to_dict()
 
 
-@posts_routes.route('/update/<id>', methods=["PUT"])
+@posts_routes.route('/update/<int:id>', methods=["PUT"])
 @login_required
 def update_post_by_id(id):
     post = Post.query.get(id)
     form = PostForm()
     form['csrf_token'].data = request.cookies['csrf_token']
-    if form.validate_on_submit(post):
-        post = Post(
-            body=form.data['body'],
-            images=form.data['images']
-        )
-        db.session.add(post)
+    if form.validate_on_submit():
+        # post = Post(
+        post.body=form.data['body']
+        post.images=form.data['images']
+        #)
+        # db.session.add(post)
         db.session.commit()
         return post.to_dict()
 
 
-@posts_routes.route('/<id>', methods=["DELETE"])
+@posts_routes.route('/<int:id>', methods=["DELETE"])
 @login_required
 def delete_post_by_id(id):
     post = Post.query.get_or_404(id)
     db.session.delete(post)
     db.session.commit()
+    return{"status": "Post deleted"}

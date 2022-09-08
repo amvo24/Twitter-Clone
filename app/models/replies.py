@@ -22,5 +22,6 @@ class Replies(db.Model):
             'body': self.body,
             'likes': self.likes,
             'reposts': self.reposts,
-            'images': self.images
+            'images': self.images,
+            'comments': self.comments.to_dict()
         }
