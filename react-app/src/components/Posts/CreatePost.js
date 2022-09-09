@@ -36,8 +36,13 @@ const CreatePost = () => {
 
   return (
     <div>
-    <div className='CreatePostUserInfo'>
-        {user.username}
+    <div className='UserInfo'>
+      <div>
+        {user.name}
+      </div>
+      <div>
+        {'@' + user.username}
+      </div>
     </div>
     <form onSubmit={handleSubmit} className="CreatePostForm">
       <div>
@@ -65,8 +70,9 @@ const CreatePost = () => {
           value={image}
         ></textarea>
       </div>
-
+      <div className='CreatePostButton'>
       <button type='submit'>Post</button>
+      </div>
     </form>
     </div>
   );

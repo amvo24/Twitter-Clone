@@ -26,6 +26,9 @@ function User() {
         <strong>User Id</strong> {userId}
       </li>
       <li>
+        <strong>Name</strong> {user.name}
+      </li>
+      <li>
         <strong>Username</strong> {user.username}
       </li>
       <li>

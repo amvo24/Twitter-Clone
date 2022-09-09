@@ -1,10 +1,11 @@
 .CreatePostForm {
+    border-bottom: .5px solid rgb(240, 240, 240);
+}
 
-    /* overflow: hidden;
-    padding-bottom: 2px;
-    padding-top: 2px;
-    position: relative;
-    white-space: pre-wrap; */
+.UserInfo {
+    text-align: left;
+    margin-left: 25px;
+    margin-bottom: 20px;
 }
 
 .CreatePostBodyContainer {
@@ -19,4 +20,11 @@
 }
 
 .CreatePostImage {
+}
+
+.CreatePostButton {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 25px;
+    margin-bottom: 20px;
 }
