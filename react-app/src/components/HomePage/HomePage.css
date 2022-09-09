@@ -18,11 +18,19 @@
     border-right: .5px solid rgb(240, 240, 240);
 }
 
-.HomePageLeftColumn {
-    text-align: center;
-    margin-right: 10px;
-
+.HomePageLeft {
+    display: flex;
+    justify-content: flex-end;
 }
+
+.Column2 {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-right: 60px;
+}
+
+
 
 .HomePageCenterColumnTitle {
     text-align: left;

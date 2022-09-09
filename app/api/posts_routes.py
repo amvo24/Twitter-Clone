@@ -23,7 +23,8 @@ def create_post():
     if form.validate_on_submit():
         newPost = Post(
             body=form.data['body'],
-            images=form.data['images']
+            images=form.data['images'],
+            user_id=current_user.id
         )
         db.session.add(newPost)
         db.session.commit()

@@ -6,14 +6,15 @@ import './HomePage.css'
 
 function HomeComponent() {
 
-
-
   return (
     <>
     <div className='HomePageColumns left'>
-        <div className='HomePageLeftColumn'>
-        <h2>NAVIGATION ITEMS</h2>
-        <NavBar />
+        <div className='HomePageLeft'>
+          {/* <div className='HomePageInnerLeft Column1'>Random</div> */}
+          <div className='HomePageInnerLeft Column2'>
+            <h2>NAVIGATION</h2>
+            <NavBar />
+          </div>
         </div>
     </div>
     <div className='HomePageColumns middle'>

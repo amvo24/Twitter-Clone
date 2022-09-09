@@ -8,8 +8,8 @@ import './GetPosts.css'
 function GetPosts() {
   const dispatch = useDispatch()
   const posts = useSelector((state) => state.posts)
-  const comments = useSelector((state) => state.comments)
-  const postsArray = Object.values(posts)
+  // const comments = useSelector((state) => state.comments)
+  const postsArray = Object.values(posts).reverse()
   const [users, setUsers] = useState([])
 
 
@@ -45,6 +45,9 @@ function GetPosts() {
               </div>
             <div className='TweetBody'>
               {post.body}
+            </div>
+            <div className='TweetImageContainer'>
+             <img className='TweetImgTag' src={post.images}/>
             </div>
             <div className='TweetBottomBar'>
               <div className='TweetCommentButton'>

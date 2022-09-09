@@ -7,31 +7,35 @@ import './NavBar.css'
 const NavBar = () => {
   return (
     <nav>
-      <ul>
+
         <li>
-          <NavLink to='/' exact={true} activeClassName='active'>
+          <NavLink to='/home' exact={true} className='NavBarLinks' activeClassName='active'>
             Home
           </NavLink>
         </li>
+        <div className='spacerDivNavBar'></div>
         <li>
-          <NavLink to='/login' exact={true} activeClassName='active'>
+          <NavLink to='/login' exact={true} className='NavBarLinks' activeClassName='active'>
             Login
           </NavLink>
         </li>
+        <div className='spacerDivNavBar'></div>
         <li>
-          <NavLink to='/sign-up' exact={true} activeClassName='active'>
+          <NavLink to='/sign-up' exact={true} className='NavBarLinks' activeClassName='active'>
             Sign Up
           </NavLink>
         </li>
+        <div className='spacerDivNavBar'></div>
         <li>
-          <NavLink to='/users' exact={true} activeClassName='active'>
+          <NavLink to='/users' exact={true} className='NavBarLinks' activeClassName='active'>
             Users
           </NavLink>
         </li>
+        <div className='spacerDivNavBar'></div>
         <li>
           <LogoutButton />
         </li>
-      </ul>
+      
     </nav>
   );
 }

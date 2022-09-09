@@ -10,16 +10,18 @@ const CreatePost = () => {
   const [errors, setErrors] = useState([]);
 
   const [body, setBody] = useState('');
-  const [image, setImage] = useState('');
+  const [images, setImages] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
         let newPost = {
             body,
-            image
+            images
         }
 
       const data = await dispatch(createOnePost(newPost));
+      setBody('')
+      setImages('')
       if (data) {
         setErrors(data)
       }
@@ -29,8 +31,8 @@ const CreatePost = () => {
     setBody(e.target.value);
   };
 
-  const updateImage = (e) => {
-    setImage(e.target.value);
+  const updateImages = (e) => {
+    setImages(e.target.value);
   };
 
 
@@ -66,8 +68,8 @@ const CreatePost = () => {
           type='text'
           name='image'
           placeholder='Image'
-          onChange={updateImage}
-          value={image}
+          onChange={updateImages}
+          value={images}
         ></input>
       </div>
       <div className='CreatePostButton'>
