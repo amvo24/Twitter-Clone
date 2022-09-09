@@ -5,10 +5,10 @@ import { signUp } from '../../store/session';
 
 const SignUpForm = () => {
   const [errors, setErrors] = useState([]);
-  const [body, setBody] = useState('');
-  const [image, setImage] = useState('');
-
-
+  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [repeatPassword, setRepeatPassword] = useState('');
   const user = useSelector(state => state.session.user);
   const dispatch = useDispatch();
 
@@ -22,12 +22,20 @@ const SignUpForm = () => {
     }
   };
 
-  const updateBody = (e) => {
-    setBody(e.target.value);
+  const updateUsername = (e) => {
+    setUsername(e.target.value);
   };
 
-  const updateImage = (e) => {
-    setImage(e.target.value);
+  const updateEmail = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const updatePassword = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const updateRepeatPassword = (e) => {
+    setRepeatPassword(e.target.value);
   };
 
   if (user) {

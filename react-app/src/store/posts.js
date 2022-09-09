@@ -111,7 +111,7 @@ export const deleteAPost = (id) => async (dispatch) => {
 const initialState = {};
 
 export default function postReducer(state = initialState, action) {
-    const newState = {}
+    let newState = {}
 
     switch (action.type) {
     case LOAD_POSTS:

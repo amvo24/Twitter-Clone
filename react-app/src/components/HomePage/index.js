@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { NavLink, Link } from 'react-router-dom';
 import GetPosts from '../Posts/GetPosts';
 import NavBar from '../NavBar_User_UserList/NavBar'
+import CreatePost from '../Posts/CreatePost';
 import './HomePage.css'
 
 
@@ -25,7 +24,8 @@ function HomeComponent() {
     </div>
     <div className='HomePageColumn middle'>
         <div className='HomePageCenterColumn'>
-            <h2>CENTER</h2>
+            <h2>Home</h2>
+            <CreatePost />
             <GetPosts />
         </div>
     </div>

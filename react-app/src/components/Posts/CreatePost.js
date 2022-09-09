@@ -1,92 +1,67 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
-import { Redirect } from 'react-router-dom';
-import { signUp } from '../../store/session';
+
+import { createOnePost } from '../../store/posts';
+
 
 const CreatePost = () => {
-  const [errors, setErrors] = useState([]);
-  const [username, setUsername] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [repeatPassword, setRepeatPassword] = useState('');
-  const user = useSelector(state => state.session.user);
   const dispatch = useDispatch();
 
-  const onSignUp = async (e) => {
+  const [errors, setErrors] = useState([]);
+  const [body, setBody] = useState('');
+  const [image, setImage] = useState('');
+
+  // const user = useSelector(state => state.session.user);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (password === repeatPassword) {
-      const data = await dispatch(signUp(username, email, password));
+        let newPost = {
+            body,
+            image
+        }
+
+      const data = await dispatch(createOnePost(newPost));
       if (data) {
         setErrors(data)
       }
-    }
+    };
+
+  const updateBody = (e) => {
+    setBody(e.target.value);
   };
 
-  const updateUsername = (e) => {
-    setUsername(e.target.value);
+  const updateImage = (e) => {
+    setImage(e.target.value);
   };
 
-  const updateEmail = (e) => {
-    setEmail(e.target.value);
-  };
-
-  const updatePassword = (e) => {
-    setPassword(e.target.value);
-  };
-
-  const updateRepeatPassword = (e) => {
-    setRepeatPassword(e.target.value);
-  };
-
-  if (user) {
-    return <Redirect to='/' />;
-  }
 
   return (
-    <form onSubmit={onSignUp}>
+    <form onSubmit={handleSubmit}>
       <div>
         {errors.map((error, ind) => (
           <div key={ind}>{error}</div>
         ))}
       </div>
       <div>
-        <label>User Name</label>
+        <label>What's Happening?</label>
         <input
           type='text'
-          name='username'
-          onChange={updateUsername}
-          value={username}
+          name='body'
+          onChange={updateBody}
+          value={body}
         ></input>
       </div>
       <div>
-        <label>Email</label>
+        <label>Image</label>
         <input
           type='text'
-          name='email'
-          onChange={updateEmail}
-          value={email}
+          name='image'
+          onChange={updateImage}
+          value={image}
         ></input>
       </div>
-      <div>
-        <label>Password</label>
-        <input
-          type='password'
-          name='password'
-          onChange={updatePassword}
-          value={password}
-        ></input>
-      </div>
-      <div>
-        <label>Repeat Password</label>
-        <input
-          type='password'
-          name='repeat_password'
-          onChange={updateRepeatPassword}
-          value={repeatPassword}
-          required={true}
-        ></input>
-      </div>
-      <button type='submit'>Sign Up</button>
+
+      <button type='submit'>Post</button>
     </form>
   );
 };
