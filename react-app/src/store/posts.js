@@ -42,9 +42,10 @@ export const getAllPosts = () => async (dispatch) => {
         // if (data.errors) {
         //     return;
         // }
-        
+
 
         dispatch(loadPosts(data));
+        return data
     }
 }
 
@@ -104,8 +105,10 @@ export const deleteAPost = (id) => async (dispatch) => {
     if (response.ok) {
         const payload = await response.json();
 
-        dispatch(deletePost(payload));
+        dispatch(deletePost(id));
+        return payload
     }
+
 };
 
 const initialState = {};
@@ -116,7 +119,7 @@ export default function postReducer(state = initialState, action) {
     switch (action.type) {
     case LOAD_POSTS:
         action.payload.posts.forEach(el => newState[el.id] = el);
-        return newState
+        return {...newState}
     case LOAD_ONE_POST:
         newState[action.payload.id] = action.payload
         return newState
@@ -130,7 +133,7 @@ export default function postReducer(state = initialState, action) {
         return newState
     case DELETE_POST:
         newState = {...state}
-        delete newState[action.payload]
+        delete newState[action?.payload]
         return newState
     default:
       return state;

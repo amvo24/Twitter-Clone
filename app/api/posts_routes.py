@@ -61,4 +61,7 @@ def delete_post_by_id(id):
     post = Post.query.get_or_404(id)
     db.session.delete(post)
     db.session.commit()
-    return{"status": "Post deleted"}
+
+    posts = Post.query.all()
+    response = [post.to_dict() for post in posts]
+    return {'posts': response}

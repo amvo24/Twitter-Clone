@@ -1,6 +1,8 @@
 import GetPosts from '../Posts/GetPosts';
 import NavBar from '../NavBar_User_UserList/NavBar'
 import CreatePost from '../Posts/CreatePost';
+import CriticismWidget from '../Widgets/CriticismWidget';
+import SocialsWidget from '../Widgets/SocialsWidget';
 import './HomePage.css'
 
 
@@ -28,8 +30,12 @@ function HomeComponent() {
     </div>
     <div className='HomePageColumns right'>
         <div className='HomePageRightColumn'>
+          <div className='HomePageInnerRight'>
             <h2>WIDGETS HERE</h2>
-
+            <CriticismWidget />
+            <SocialsWidget />
+          </div>
+          <div className='HomePageInnerRight2'></div>
         </div>
     </div>
 

@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { getAllPosts } from '../../store/posts';
+import { getAllPosts, deleteAPost } from '../../store/posts';
 import CreateCommentModal from '../Comments/CommentModal';
 import './GetPosts.css'
 
 function GetPosts() {
   const dispatch = useDispatch()
   const posts = useSelector((state) => state.posts)
-  // const comments = useSelector((state) => state.comments)
+  const currentUser = useSelector((state) => state.session.user)
   const postsArray = Object.values(posts).reverse()
   const [users, setUsers] = useState([])
 
@@ -21,6 +21,11 @@ function GetPosts() {
     }
     fetchData();
   }, []);
+
+  const deletePost = (id) => async(e) => {
+    e.preventDefault()
+    dispatch(deleteAPost(id))
+  }
 
   useEffect(() => {
     dispatch(getAllPosts())
@@ -61,8 +66,10 @@ function GetPosts() {
               <div className='TweetLikesButton'>
               LIKES
               </div>
-              <div className='TweetDeleteButton'>
-              DELETE
+              <div className='TweetDeleteButtonDiv'>
+                {currentUser && currentUser.id === post.user_id && (
+              <button className='TweetDeleteButton' onClick={deletePost(post.id)}>Delete</button>
+              ) || (<button>Share</button>)}
               </div>
             </div>
             </Link>

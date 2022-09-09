@@ -7,7 +7,6 @@ import './NavBar.css'
 const NavBar = () => {
   return (
     <nav>
-
         <li>
           <NavLink to='/home' exact={true} className='NavBarLinks' activeClassName='active'>
             Home
@@ -35,7 +34,6 @@ const NavBar = () => {
         <li>
           <LogoutButton />
         </li>
-      
     </nav>
   );
 }
