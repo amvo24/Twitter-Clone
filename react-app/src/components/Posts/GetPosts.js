@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { getAllPosts } from '../../store/posts';
+import CreateCommentModal from '../Comments/CommentModal';
 import './GetPosts.css'
 
 function GetPosts() {
   const dispatch = useDispatch()
   const posts = useSelector((state) => state.posts)
-  // const user = useSelector((state) => state.session.user)
+  const comments = useSelector((state) => state.comments)
   const postsArray = Object.values(posts)
-  console.log(postsArray)
   const [users, setUsers] = useState([])
 
 
@@ -31,6 +32,7 @@ function GetPosts() {
       <div>
         {postsArray.map((post) => (
           <div className='TweetContainer' key={post.id}>
+                <Link to={`./post/${post.id}`} className='TweetLink'>
               <div className='TweetUserContainer' >
                 {users.filter(user => user.id === post.user_id).map(trueUser => (
                   <div className='TweetName' key={trueUser.id}>
@@ -46,7 +48,7 @@ function GetPosts() {
             </div>
             <div className='TweetBottomBar'>
               <div className='TweetCommentButton'>
-              COMMENTS
+              <CreateCommentModal />
               </div>
               <div className='TweetRetweetsButton'>
               RETWEETS
@@ -58,6 +60,7 @@ function GetPosts() {
               DELETE
               </div>
             </div>
+            </Link>
           </div>
         ))}
       </div>

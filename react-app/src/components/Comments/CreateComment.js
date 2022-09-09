@@ -1,25 +1,26 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
-import { createOnePost } from '../../store/posts';
-import './CreatePost.css'
+import { editAPost } from '../../store/posts';
 
 
-const CreatePost = () => {
+
+const EditPost = () => {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.session.user)
+  const comment = useSelector((state) => state.comments)
   const [errors, setErrors] = useState([]);
 
-  const [body, setBody] = useState('');
-  const [image, setImage] = useState('');
+  const [body, setBody] = useState(comment?.body);
+  const [image, setImage] = useState(comment?.image);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-        let newPost = {
+        let editedPost = {
             body,
             image
         }
 
-      const data = await dispatch(createOnePost(newPost));
+      const data = await dispatch(editAPost(editedPost));
       if (data) {
         setErrors(data)
       }
@@ -44,15 +45,15 @@ const CreatePost = () => {
         {'@' + user.username}
       </div>
     </div>
-    <form onSubmit={handleSubmit} className="CreatePostForm">
+    <form onSubmit={handleSubmit} className="EditPostForm">
       <div>
         {errors.map((error, ind) => (
           <div key={ind}>{error}</div>
         ))}
       </div>
-      <div className='CreatePostBodyContainer'>
+      <div className='EditPostBodyContainer'>
         <input
-          className='CreatePostBody'
+          className='EditPostBody'
           type='text'
           name='body'
           placeholder="What's Happening?"
@@ -62,7 +63,7 @@ const CreatePost = () => {
       </div>
       <div>
         <input
-          className='CreatePostImage'
+          className='EditPostImage'
           type='text'
           name='image'
           placeholder='Image'
@@ -70,12 +71,12 @@ const CreatePost = () => {
           value={image}
         ></input>
       </div>
-      <div className='CreatePostButton'>
-      <button type='submit'>Post</button>
+      <div className='EditPostButton'>
+      <button type='submit'>Update</button>
       </div>
     </form>
     </div>
   );
 };
 
-export default CreatePost;
+export default EditPost;

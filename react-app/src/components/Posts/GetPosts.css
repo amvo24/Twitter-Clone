@@ -1,11 +1,25 @@
 .TweetContainer {
     padding: 5%;
-    /* text-align: center; */
+    border: .5px solid rgb(240, 240, 240);
+}
+
+.TweetContainer:hover {
+    background-color: rgb(240, 240, 240);
 }
 
 .TweetUserContainer {
     padding: 10px;
     text-align: left;
+}
+
+.TweetLink:link {
+    text-decoration: none;
+    color: black;
+}
+
+.TweetLink:visited {
+    text-decoration: none;
+    color: black;
 }
 
 .TweetBody {

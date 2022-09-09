@@ -91,7 +91,7 @@ export const deleteAComment = (id) => async (dispatch) => {
 const initialState = {};
 
 export default function commentReducer(state = initialState, action) {
-    const newState = {}
+    let newState = {}
 
     switch (action.type) {
     case LOAD_COMMENTS:

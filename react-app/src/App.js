@@ -7,6 +7,7 @@ import ProtectedRoute from './components/auth/ProtectedRoute';
 import UsersList from './components/NavBar_User_UserList/UsersList';
 import User from './components/NavBar_User_UserList/User';
 import HomeComponent from './components/HomePage';
+import PostDetail from './components/Posts/PostDetails';
 import { authenticate } from './store/session';
 
 function App() {
@@ -41,6 +42,9 @@ function App() {
         </ProtectedRoute>
         <ProtectedRoute path='/home' exact={true} >
           <HomeComponent />
+        </ProtectedRoute>
+        <ProtectedRoute path='/post/:id' exact={true} >
+          <PostDetail />
         </ProtectedRoute>
       </Switch>
     </BrowserRouter>

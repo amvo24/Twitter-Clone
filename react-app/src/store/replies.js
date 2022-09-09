@@ -91,7 +91,7 @@ export const deleteAReply = (id) => async (dispatch) => {
 const initialState = {};
 
 export default function repliesReducer(state = initialState, action) {
-    const newState = {}
+    let newState = {}
 
     switch (action.type) {
     case LOAD_REPLIES:
