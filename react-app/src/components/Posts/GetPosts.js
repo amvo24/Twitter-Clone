@@ -33,7 +33,8 @@ function GetPosts() {
         {postsArray.map((post) => (
           <div className='TweetContainer' key={post.id}>
                 <Link to={`./post/${post.id}`} className='TweetLink'>
-              <div className='TweetUserContainer' >
+              <div className='TweetUserContainer'>
+                <div className='TweetContainerTopHalf'>
                 {users.filter(user => user.id === post.user_id).map(trueUser => (
                   <div className='TweetName' key={trueUser.id}>
                     {trueUser.name}
@@ -42,13 +43,14 @@ function GetPosts() {
                   </div>
                   </div>
                 ))}
-              </div>
             <div className='TweetBody'>
               {post.body}
             </div>
-            <div className='TweetImageContainer'>
-             <img className='TweetImgTag' src={post.images}/>
+              </div>
             </div>
+            {/* <div className='TweetImageContainer'> */}
+             <img className='TweetImgTag' src={post.images}/>
+            {/* </div> */}
             <div className='TweetBottomBar'>
               <div className='TweetCommentButton'>
               <CreateCommentModal />

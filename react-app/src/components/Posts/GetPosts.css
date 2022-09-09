@@ -1,5 +1,5 @@
 .TweetContainer {
-    padding: 5%;
+    /* padding: 5%; */
     border: .5px solid rgb(240, 240, 240);
 }
 
@@ -7,9 +7,22 @@
     background-color: rgb(240, 240, 240);
 }
 
+.TweetContainerTopHalf {
+    margin: 10px 25px 10px 25px
+}
+
 .TweetUserContainer {
-    padding: 10px;
+    margin: 15px 10px 25px 10px;
     text-align: left;
+}
+
+.TweetName {
+    font-weight: bold;
+    font-size: large;
+}
+
+.TweetUsername {
+    font-weight: normal
 }
 
 .TweetLink:link {
@@ -24,11 +37,25 @@
 
 .TweetBody {
     text-align: left;
+    margin-top: 20px;
+    font-size: larger;
+}
+
+.TweetImageContainer {
+    width: 100%;
+}
+
+.TweetImgTag {
+    width: 100%;
 }
 
 .TweetBottomBar {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+
 
 }

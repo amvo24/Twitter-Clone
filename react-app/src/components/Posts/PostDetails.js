@@ -3,6 +3,7 @@ import { useParams} from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux';
 import { getOnePost } from '../../store/posts'
 import NavBar from '../NavBar_User_UserList/NavBar'
+import CreateCommentModal from '../Comments/CommentModal';
 import '../HomePage/HomePage.css'
 import './PostDetails.css'
 
@@ -29,12 +30,15 @@ function PostDetail() {
 
     return (
         <>
-        <div className='HomePageColumns left'>
-            <div className='HomePageLeftColumn'>
-            <h2>NAVIGATION ITEMS</h2>
+         <div className='HomePageColumns left'>
+        <div className='HomePageLeft'>
+          {/* <div className='HomePageInnerLeft Column1'>Random</div> */}
+          <div className='HomePageInnerLeft Column2'>
+            <h2>NAVIGATION</h2>
             <NavBar />
-            </div>
+          </div>
         </div>
+    </div>
         <div className='HomePageColumns middle'>
             <div className='HomePageCenterColumn'>
                 <h2 className='HomePageCenterColumnTitle'>
@@ -54,8 +58,22 @@ function PostDetail() {
                 {post?.body}
                 </div>
                 <div className='ActualPostImage'>
-                {post?.images}
+                <img className='TweetImgTag' src={post.images}/>
                 </div>
+                <div className='TweetBottomBar'>
+              <div className='TweetCommentButton'>
+              <CreateCommentModal />
+              </div>
+              <div className='TweetRetweetsButton'>
+              RETWEETS
+              </div>
+              <div className='TweetLikesButton'>
+              LIKES
+              </div>
+              <div className='TweetDeleteButton'>
+              DELETE
+              </div>
+            </div>
             </div>
         </div>
         <div className='HomePageColumns right'>
