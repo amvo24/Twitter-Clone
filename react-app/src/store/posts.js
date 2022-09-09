@@ -42,7 +42,7 @@ export const getAllPosts = () => async (dispatch) => {
         // if (data.errors) {
         //     return;
         // }
-        console.log(data.posts, 'datatttta')
+        
 
         dispatch(loadPosts(data));
     }

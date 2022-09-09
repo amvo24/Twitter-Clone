@@ -1,18 +1,33 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import postReducer, { getAllPosts } from '../../store/posts';
-import { NavLink, Link } from 'react-router-dom';
+import { getAllPosts } from '../../store/posts';
 import './GetPosts.css'
 
 function GetPosts() {
   const dispatch = useDispatch()
   const posts = useSelector((state) => state.posts)
+  // const user = useSelector((state) => state.session.user)
   const postsArray = Object.values(posts)
-  console.log(posts, "component")
+  const [users, setUsers] = useState([])
+
+
+  useEffect(() => {
+    async function fetchData() {
+      const response = await fetch('/api/users/');
+      const responseData = await response.json();
+      setUsers(responseData.users);
+    }
+    fetchData();
+  }, []);
+  console.log(users, "look here")
+
 
   useEffect(() => {
     dispatch(getAllPosts())
   }, [dispatch])
+
+
+
 
   return (
     <>
@@ -20,9 +35,16 @@ function GetPosts() {
       <div>
         {postsArray.map((post) => (
           <div className='TweetContainer'>
-            <div className='TweetUsername'>
-            --USERNAME GOES HERE--
-            </div>
+              <div className='TweetUserContainer'>
+                {users.filter(user => user.id === post.user_id).map(trueUser => (
+                  <div className='TweetName'>
+                    {trueUser.name}
+                  <div className='TweetUsername'>
+                    {"@"+trueUser.username}
+                  </div>
+                  </div>
+                ))}
+              </div>
             <div className='TweetBody'>
               {post.body}
             </div>
