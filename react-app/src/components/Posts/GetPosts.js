@@ -8,6 +8,7 @@ function GetPosts() {
   const posts = useSelector((state) => state.posts)
   // const user = useSelector((state) => state.session.user)
   const postsArray = Object.values(posts)
+  console.log(postsArray)
   const [users, setUsers] = useState([])
 
 
@@ -29,12 +30,12 @@ function GetPosts() {
       <h1>MAIN TWEETS PAGE</h1>
       <div>
         {postsArray.map((post) => (
-          <div className='TweetContainer'>
-              <div className='TweetUserContainer'>
+          <div className='TweetContainer' key={post.id}>
+              <div className='TweetUserContainer' >
                 {users.filter(user => user.id === post.user_id).map(trueUser => (
-                  <div className='TweetName'>
+                  <div className='TweetName' key={trueUser.id}>
                     {trueUser.name}
-                  <div className='TweetUsername'>
+                    <div className='TweetUsername'>
                     {"@"+trueUser.username}
                   </div>
                   </div>
