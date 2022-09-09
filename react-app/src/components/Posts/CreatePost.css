@@ -1,0 +1,22 @@
+.CreatePostForm {
+
+    /* overflow: hidden;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    position: relative;
+    white-space: pre-wrap; */
+}
+
+.CreatePostBodyContainer {
+    height: 100%;
+}
+
+.CreatePostBody {
+    /* border: none; */
+    width: 70%;
+    height: 100%;
+
+}
+
+.CreatePostImage {
+}

@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 import { createOnePost } from '../../store/posts';
+import User from '../NavBar_User_UserList/User'
 import './CreatePost.css'
 
 
 const CreatePost = () => {
   const dispatch = useDispatch();
-
+  const user = useSelector((state) => state.session.user)
   const [errors, setErrors] = useState([]);
   const [body, setBody] = useState('');
   const [image, setImage] = useState('');
@@ -34,34 +35,40 @@ const CreatePost = () => {
 
 
   return (
-    
-    <form onSubmit={handleSubmit}>
+    <div>
+    <div className='CreatePostUserInfo'>
+        {user.username}
+    </div>
+    <form onSubmit={handleSubmit} className="CreatePostForm">
       <div>
         {errors.map((error, ind) => (
           <div key={ind}>{error}</div>
         ))}
       </div>
-      <div>
-        <label>What's Happening?</label>
-        <input
+      <div className='CreatePostBodyContainer'>
+        <textarea
+          className='CreatePostBody'
           type='text'
           name='body'
+          placeholder="What's Happening?"
           onChange={updateBody}
           value={body}
-        ></input>
+        ></textarea>
       </div>
       <div>
-        <label>Image</label>
-        <input
+        <textarea
+          className='CreatePostImage'
           type='text'
           name='image'
+          placeholder='Image'
           onChange={updateImage}
           value={image}
-        ></input>
+        ></textarea>
       </div>
 
       <button type='submit'>Post</button>
     </form>
+    </div>
   );
 };
 

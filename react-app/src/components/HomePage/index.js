@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import GetPosts from '../Posts/GetPosts';
 import NavBar from '../NavBar_User_UserList/NavBar'
+
 import CreatePost from '../Posts/CreatePost';
 import './HomePage.css'
 
