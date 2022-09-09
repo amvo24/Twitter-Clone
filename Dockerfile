@@ -4,7 +4,7 @@ FROM python:3.9
 
 
 # REACT_APP_BASE_URL -> Your deployment URL
-ENV REACT_APP_BASE_URL=<herokuURL>
+# ENV REACT_APP_BASE_URL=<herokuURL>
 
 
 # FLASK_APP -> entry point to your flask app

@@ -19,15 +19,10 @@ function GetPosts() {
     }
     fetchData();
   }, []);
-  console.log(users, "look here")
-
 
   useEffect(() => {
     dispatch(getAllPosts())
   }, [dispatch])
-
-
-
 
   return (
     <>

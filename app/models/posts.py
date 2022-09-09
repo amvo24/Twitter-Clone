@@ -28,5 +28,5 @@ class Post(db.Model):
             'reposts': self.reposts,
             'images': self.images,
             'user_id': self.user_id,
-            # 'user': self.userObject.to_dict()
+            'user': self.userObject.to_dict()
         }

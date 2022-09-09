@@ -3,7 +3,7 @@ from flask import Blueprint, jsonify, request
 from app.api.auth_routes import validation_errors_to_error_messages
 from app.models import db, Post
 from app.forms import PostForm
-from flask_login import login_required
+from flask_login import login_required, current_user
 
 posts_routes = Blueprint('posts', __name__)
 

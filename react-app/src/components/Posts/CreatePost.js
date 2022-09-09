@@ -9,6 +9,7 @@ const CreatePost = () => {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.session.user)
   const [errors, setErrors] = useState([]);
+
   const [body, setBody] = useState('');
   const [image, setImage] = useState('');
 
@@ -23,7 +24,7 @@ const CreatePost = () => {
       if (data) {
         setErrors(data)
       }
-    };
+  };
 
   const updateBody = (e) => {
     setBody(e.target.value);
@@ -51,24 +52,24 @@ const CreatePost = () => {
         ))}
       </div>
       <div className='CreatePostBodyContainer'>
-        <textarea
+        <input
           className='CreatePostBody'
           type='text'
           name='body'
           placeholder="What's Happening?"
           onChange={updateBody}
           value={body}
-        ></textarea>
+        ></input>
       </div>
       <div>
-        <textarea
+        <input
           className='CreatePostImage'
           type='text'
           name='image'
           placeholder='Image'
           onChange={updateImage}
           value={image}
-        ></textarea>
+        ></input>
       </div>
       <div className='CreatePostButton'>
       <button type='submit'>Post</button>
