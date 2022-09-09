@@ -38,12 +38,13 @@ export const getAllPosts = () => async (dispatch) => {
         }
     });
     if (response.ok) {
-        const payload = await response.json();
-        if (payload.errors) {
-            return;
-        }
+        const data = await response.json();
+        // if (data.errors) {
+        //     return;
+        // }
+        console.log(data.posts, 'datatttta')
 
-        dispatch(loadPosts(payload));
+        dispatch(loadPosts(data));
     }
 }
 
@@ -114,7 +115,7 @@ export default function postReducer(state = initialState, action) {
 
     switch (action.type) {
     case LOAD_POSTS:
-        action.payload.forEach(el => newState[el.id] = el);
+        action.payload.posts.forEach(el => newState[el.id] = el);
         return newState
     case LOAD_ONE_POST:
         newState[action.payload.id] = action.payload

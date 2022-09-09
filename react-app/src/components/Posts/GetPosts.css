@@ -1,0 +1,21 @@
+.TweetContainer {
+
+    padding: 5%;
+    /* text-align: center; */
+}
+
+.TweetUsername {
+    padding: 10px;
+    text-align: left;
+}
+
+.TweetBody {
+    text-align: left;
+}
+
+.TweetBottomBar {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+
+}

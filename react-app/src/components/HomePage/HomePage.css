@@ -1,0 +1,30 @@
+.HomePageTitle {
+    text-align: center;
+}
+
+.HomePageColumn {
+    float: left;
+
+}
+
+.left, .right {
+    width: 25%;
+}
+
+.middle {
+    width: 50%;
+}
+
+.HomePageLeftColumn {
+    text-align: right;
+
+}
+
+.HomePageCenterColumn {
+    text-align: center;
+
+}
+
+.HomePageRightColumn {
+    text-align: left;
+}

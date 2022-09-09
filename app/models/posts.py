@@ -1,3 +1,4 @@
+from tkinter import CASCADE
 from .db import db
 
 """
@@ -13,10 +14,10 @@ class Post(db.Model):
     likes = db.Column(db.Integer, nullable=True)
     reposts = db.Column(db.Integer, nullable=True)
     images = db.Column(db.String, nullable=True)
-    user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
 
-    user = db.relationship("User", back_populates="post")
-    comments = db.relationship("Comment", back_populates="post")
+    userObject = db.relationship("User", back_populates="post")
+    comments = db.relationship("Comment", back_populates="post", cascade='all, delete')
 
 
     def to_dict(self):
@@ -27,5 +28,5 @@ class Post(db.Model):
             'reposts': self.reposts,
             'images': self.images,
             'user_id': self.user_id,
-            # 'user': self.user.to_dict()
+            # 'user': self.userObject.to_dict()
         }
