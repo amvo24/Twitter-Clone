@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
-
 import { createOnePost } from '../../store/posts';
+import './CreatePost.css'
 
 
 const CreatePost = () => {
@@ -10,8 +10,6 @@ const CreatePost = () => {
   const [errors, setErrors] = useState([]);
   const [body, setBody] = useState('');
   const [image, setImage] = useState('');
-
-  // const user = useSelector(state => state.session.user);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -36,6 +34,7 @@ const CreatePost = () => {
 
 
   return (
+    
     <form onSubmit={handleSubmit}>
       <div>
         {errors.map((error, ind) => (

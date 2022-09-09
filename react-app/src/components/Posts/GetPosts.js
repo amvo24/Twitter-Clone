@@ -36,6 +36,9 @@ function GetPosts() {
               <div className='TweetLikesButton'>
               LIKES
               </div>
+              <div className='TweetDeleteButton'>
+              DELETE
+              </div>
             </div>
           </div>
         ))}

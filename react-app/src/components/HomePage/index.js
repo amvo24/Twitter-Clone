@@ -15,21 +15,23 @@ function HomeComponent() {
 
   return (
     <>
-      <h1 className='HomePageTitle'>HOME PAGE</h1>
-    <div className='HomePageColumn left'>
+      {/* <h1 className='HomePageTitle'>HOME PAGE</h1> */}
+    <div className='HomePageColumns left'>
         <div className='HomePageLeftColumn'>
         <h2>NAVIGATION ITEMS</h2>
         <NavBar />
         </div>
     </div>
-    <div className='HomePageColumn middle'>
+    <div className='HomePageColumns middle'>
         <div className='HomePageCenterColumn'>
-            <h2>Home</h2>
+            <h2 className='HomePageCenterColumnTitle'>
+              Home
+            </h2>
             <CreatePost />
             <GetPosts />
         </div>
     </div>
-    <div className='HomePageColumn right'>
+    <div className='HomePageColumns right'>
         <div className='HomePageRightColumn'>
             <h2>WIDGETS HERE</h2>
 

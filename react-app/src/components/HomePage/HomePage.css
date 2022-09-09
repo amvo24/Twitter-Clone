@@ -1,23 +1,32 @@
-.HomePageTitle {
+/* .HomePageTitle {
     text-align: center;
-}
+} */
 
-.HomePageColumn {
+
+.HomePageColumns {
     float: left;
 
 }
 
 .left, .right {
-    width: 25%;
+    width: 30%;
 }
 
 .middle {
-    width: 50%;
+    width: 39%;
+    border-left: .5px solid rgb(240, 240, 240);
+    border-right: .5px solid rgb(240, 240, 240);
 }
 
 .HomePageLeftColumn {
-    text-align: right;
+    text-align: center;
+    margin-right: 10px;
 
+}
+
+.HomePageCenterColumnTitle {
+    text-align: left;
+    margin-left: 25px;
 }
 
 .HomePageCenterColumn {
@@ -27,4 +36,5 @@
 
 .HomePageRightColumn {
     text-align: left;
+    margin-left: 10px;
 }
