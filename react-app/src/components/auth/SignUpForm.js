@@ -6,6 +6,8 @@ import { signUp } from '../../store/session';
 const SignUpForm = () => {
   const [errors, setErrors] = useState([]);
   const [username, setUsername] = useState('');
+  const [name, setName] = useState('');
+  const [profilePic, setProfilePic] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [repeatPassword, setRepeatPassword] = useState('');
@@ -24,6 +26,13 @@ const SignUpForm = () => {
 
   const updateUsername = (e) => {
     setUsername(e.target.value);
+  };
+
+  const updateName = (e) => {
+    setName(e.target.value);
+  };
+  const updateProfilePic = (e) => {
+    setProfilePic(e.target.value);
   };
 
   const updateEmail = (e) => {
@@ -50,12 +59,30 @@ const SignUpForm = () => {
         ))}
       </div>
       <div>
-        <label>User Name</label>
+        <label>Username</label>
         <input
           type='text'
           name='username'
           onChange={updateUsername}
           value={username}
+        ></input>
+      </div>
+      <div>
+        <label>Name</label>
+        <input
+          type='text'
+          name='name'
+          onChange={updateName}
+          value={name}
+        ></input>
+      </div>
+      <div>
+        <label>Profile Pic</label>
+        <input
+          type='text'
+          name='profilePic'
+          onChange={updateProfilePic}
+          value={profilePic}
         ></input>
       </div>
       <div>

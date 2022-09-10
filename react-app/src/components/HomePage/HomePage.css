@@ -20,6 +20,7 @@
 
 .left {
     width: 25%;
+    
 }
 
 .right {
@@ -30,11 +31,14 @@
     width: 39%;
     border-left: .5px solid rgb(240, 240, 240);
     border-right: .5px solid rgb(240, 240, 240);
+
 }
 
 .HomePageLeft {
     display: flex;
     justify-content: flex-end;
+
+
 }
 
 .Column2 {

@@ -39,11 +39,16 @@ const CreatePost = () => {
   return (
     <div>
     <div className='UserInfo'>
-      <div>
-        {user.name}
+      <div className='ProfilePicContainer'>
+          <img className='ProfilePic' src={user.profile_pic}/>
       </div>
-      <div>
-        {'@' + user.username}
+      <div className='CPUsernamecontainer'>
+          <div className='CreatePostUsersName'>
+            {user.name}
+          </div>
+          <div className='CreatePostUsername'>
+            {'@' + user.username}
+          </div>
       </div>
     </div>
     <form onSubmit={handleSubmit} className="CreatePostForm">

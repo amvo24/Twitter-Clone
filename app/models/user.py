@@ -12,6 +12,7 @@ class User(db.Model, UserMixin):
     username = db.Column(db.String(40), nullable=False, unique=True)
     email = db.Column(db.String(255), nullable=False, unique=True)
     hashed_password = db.Column(db.String(255), nullable=False)
+    profile_pic = db.Column(db.String, nullable=True)
 
     post = db.relationship("Post", back_populates="userObject", cascade='all, delete')
     comments = db.relationship("Comment", back_populates="user", cascade='all, delete')
@@ -34,5 +35,6 @@ class User(db.Model, UserMixin):
             'id': self.id,
             'name': self.name,
             'username': self.username,
-            'email': self.email
+            'email': self.email,
+            'profile_pic': self.profile_pic
         }

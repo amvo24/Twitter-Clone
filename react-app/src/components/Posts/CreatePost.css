@@ -6,6 +6,40 @@
     text-align: left;
     margin-left: 25px;
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+/* ------IMAGE CSS------ */
+.ProfilePicContainer {
+   height: 60px;
+   width: 60px;
+}
+
+
+.ProfilePic {
+    
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+}
+
+/* ------IMAGE CSS------ */
+
+.CPUsernamecontainer {
+    margin-left: 15px;
+
+}
+
+.CreatePostUsersName {
+    font-weight: bold;
+    font-size: larger;
+
+}
+
+.CreatePostUsername {
+    font-size: large;
+
 }
 
 .CreatePostBodyContainer {
