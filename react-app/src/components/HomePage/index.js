@@ -14,7 +14,10 @@ function HomeComponent() {
         <div className='HomePageLeft'>
           {/* <div className='HomePageInnerLeft Column1'>Random</div> */}
           <div className='HomePageInnerLeft Column2'>
-            <h2>NAVIGATION</h2>
+            {/* <h2>NAVIGATION</h2> */}
+            <div className='BIRDIMGCONTAINER'>
+            <img className='BIRDIMG' src='https://icon-library.com/images/twitter-bird-icon-png/twitter-bird-icon-png-23.jpg'/>
+            </div>
             <NavBar />
           </div>
         </div>

@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getOnePost } from '../../store/posts'
 import NavBar from '../NavBar_User_UserList/NavBar'
 import CreateCommentModal from '../Comments/CommentModal';
+import CriticismWidget from '../Widgets/CriticismWidget';
+import SocialsWidget from '../Widgets/SocialsWidget';
 import '../HomePage/HomePage.css'
 import './PostDetails.css'
 
@@ -34,7 +36,10 @@ function PostDetail() {
         <div className='HomePageLeft'>
           {/* <div className='HomePageInnerLeft Column1'>Random</div> */}
           <div className='HomePageInnerLeft Column2'>
-            <h2>NAVIGATION</h2>
+            {/* <h2>NAVIGATION</h2> */}
+            <div className='BIRDIMGCONTAINER'>
+            <img className='BIRDIMG' src='https://icon-library.com/images/twitter-bird-icon-png/twitter-bird-icon-png-23.jpg'/>
+            </div>
             <NavBar />
           </div>
         </div>
@@ -58,7 +63,7 @@ function PostDetail() {
                 {post?.body}
                 </div>
                 <div className='ActualPostImage'>
-                <img className='TweetImgTag' src={post.images}/>
+                <img className='TweetImgTag' src={post?.images}/>
                 </div>
                 <div className='TweetBottomBar'>
               <div className='TweetCommentButton'>
@@ -77,11 +82,15 @@ function PostDetail() {
             </div>
         </div>
         <div className='HomePageColumns right'>
-            <div className='HomePageRightColumn'>
-                <h2>WIDGETS HERE</h2>
-
-            </div>
+        <div className='HomePageRightColumn'>
+          <div className='HomePageInnerRight'>
+            <h2>WIDGETS HERE</h2>
+            <CriticismWidget />
+            <SocialsWidget />
+          </div>
+          <div className='HomePageInnerRight2'></div>
         </div>
+    </div>
 
         </>
       );

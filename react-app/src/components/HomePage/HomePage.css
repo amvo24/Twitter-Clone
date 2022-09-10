@@ -8,6 +8,16 @@
 
 }
 
+.BIRDIMGCONTAINER {
+    height: 50px;
+    width: 50px;
+}
+
+.BIRDIMG {
+    height: 100%;
+    width: 100%;
+}
+
 .left {
     width: 25%;
 }
