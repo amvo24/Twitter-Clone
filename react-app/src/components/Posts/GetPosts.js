@@ -43,7 +43,7 @@ function GetPosts() {
                   {users
                     .filter((user) => user.id === post.user_id)
                     .map((trueUser) => (
-                      <div className="TweetUserContainer123">
+                      <div className="TweetUserContainer123" key={trueUser.id}>
                         <div className="ImageContainer34">
                           <img
                             className="ProfilePic"
@@ -51,7 +51,7 @@ function GetPosts() {
                           />
                         </div>
                         <div className="TweetUserInfoContainer">
-                          <div className="TweetName" key={trueUser.id}>
+                          <div className="TweetName">
                             {trueUser.name}
                             <div className="TweetUsername">
                               {"@" + trueUser.username}
@@ -66,9 +66,10 @@ function GetPosts() {
               {/* <div className='TweetImageContainer'> */}
               <img className="TweetImgTag" src={post.images} />
               {/* </div> */}
+              </Link>
               <div className="TweetBottomBar">
                 <div className="TweetCommentButton">
-                  <CreateCommentModal />
+                  <CreateCommentModal id={post.id}/>
                 </div>
                 <div className="TweetRetweetsButton">RETWEETS</div>
                 <div className="TweetLikesButton">LIKES</div>
@@ -81,7 +82,7 @@ function GetPosts() {
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
                       aria-hidden="true"
-                      class="r-9l7dzd r-4qtqp9 r-yyyyoo r-1q142lx r-1xvli5t r-1b7u577 r-dnmrzs r-bnwqim r-1plcrui r-lrvibr"
+
                       width="30"
                       height="30"
                     >
@@ -100,7 +101,7 @@ function GetPosts() {
                   )) || <button>Share</button>}
                 </div>
               </div>
-            </Link>
+            {/* </Link> */}
           </div>
         ))}
       </div>

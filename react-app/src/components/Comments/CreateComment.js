@@ -1,26 +1,27 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
-import { editAPost } from '../../store/posts';
+import { createOneComment } from '../../store/comments';
+import './CreateComment.css'
 
 
 
-const EditPost = () => {
+const CreateComment = ({id}) => {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.session.user)
   const comment = useSelector((state) => state.comments)
   const [errors, setErrors] = useState([]);
 
-  const [body, setBody] = useState(comment?.body);
-  const [image, setImage] = useState(comment?.image);
+  const [body, setBody] = useState('');
+  const [image, setImage] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-        let editedPost = {
+        let createdComment = {
             body,
             image
         }
 
-      const data = await dispatch(editAPost(editedPost));
+      const data = await dispatch(createOneComment(createdComment, id));
       if (data) {
         setErrors(data)
       }
@@ -37,33 +38,33 @@ const EditPost = () => {
 
   return (
     <div>
-    <div className='UserInfo'>
+    {/* <div className='UserInfo'>
       <div>
         {user.name}
       </div>
       <div>
         {'@' + user.username}
       </div>
-    </div>
-    <form onSubmit={handleSubmit} className="EditPostForm">
+    </div> */}
+    <form onSubmit={handleSubmit} className="createCommentForm">
       <div>
         {errors.map((error, ind) => (
           <div key={ind}>{error}</div>
         ))}
       </div>
-      <div className='EditPostBodyContainer'>
+      <div className='createCommentBodyContainer'>
         <input
-          className='EditPostBody'
+          className='CreateCommentInput'
           type='text'
           name='body'
-          placeholder="What's Happening?"
+          placeholder="Post your reply"
           onChange={updateBody}
           value={body}
         ></input>
       </div>
-      <div>
+      <div className='createCommentImgContainer'>
         <input
-          className='EditPostImage'
+          className='CreateCommentImageInput'
           type='text'
           name='image'
           placeholder='Image'
@@ -71,12 +72,12 @@ const EditPost = () => {
           value={image}
         ></input>
       </div>
-      <div className='EditPostButton'>
-      <button type='submit'>Update</button>
-      </div>
+      {/* <div className='CreateCommentButton'> */}
+      <button className='CreateCommentButton'  type='submit'>Update</button>
+      {/* </div> */}
     </form>
     </div>
   );
 };
 
-export default EditPost;
+export default CreateComment;

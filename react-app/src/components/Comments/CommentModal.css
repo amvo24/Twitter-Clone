@@ -1,0 +1,114 @@
+.Modal_2983 {
+    /* background-color: rgb(255, 251, 0); */
+    display: flex;
+    flex-direction: column;
+
+}
+
+.TopOfModal {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 47%;
+    /* background-color: rgb(234, 255, 0); */
+}
+
+.UserInfo_328974 {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    /* background-color: darkgreen; */
+    margin-top: 30px;
+}
+
+
+.UserProfilePic_23407 {
+    height: 80%;
+    /* background-color: blueviolet; */
+    margin-left: 20px;
+    margin-right: 15px;
+}
+
+.Usernameandname_1234 {
+    display: flex;
+    flex-direction: column;
+}
+
+.Name_2390 {
+    font-weight: bold;
+    font-size: larger;
+}
+
+.PostDetails_234 {
+    display: flex;
+    flex-direction: column;
+    /* background-color: darkblue; */
+    height: 100%;
+}
+
+
+.PostImage_08932 {
+    width: 50%;
+
+}
+
+.ActualPic_234 {
+    width: 100%;
+    height: 100%;
+}
+
+.PostBody_08932 {
+    font-size: larger;
+    margin-left: 20px;
+}
+
+.MiddlePart_238794 {
+    display: flex;
+    flex-direction: row;
+    /* background-color: chartreuse; */
+    width: 100%;
+    height: 60px;
+    margin-top: 20px;
+}
+
+.greyLineConnectingProfilePic {
+    border-left: 3px solid rgb(209, 208, 208);
+    height: 50px;
+    margin-left: 6%;
+    margin-right: 6%;
+}
+
+.ReplyingtoThing {
+    font-size: larger;
+}
+
+.BottomOfModal {
+    height: 37%;
+    width: 100%;
+    /* background-color: blue; */
+}
+
+.createCommentForm_2093 {
+    /* background-color: rgb(42, 165, 54); */
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    width: 100%;
+    margin-top: -50px;
+    /* background-color: darkgreen; */
+}
+
+.ReplyProfilePic_34 {
+    /* background-color: blueviolet; */
+    height: 80%;
+    margin-left: 20px;
+    margin-right: 15px;
+
+
+}
+
+.Thing_234 {
+    margin-top: 4%;
+    margin-left: 16px;
+}
