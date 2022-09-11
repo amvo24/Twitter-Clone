@@ -1,11 +1,17 @@
 // constants
 const LOAD_COMMENTS = 'comment/load_comment'
+const LOAD_COMMENTS_BY_POST = 'comment/load_comment_by_post'
 const CREATE_COMMENT = 'comment/create_post'
 const EDIT_COMMENT = 'comment/edit_comment'
 const DELETE_COMMENT = 'comment/delete_comment'
 
 const loadComment = (payload) => ({
   type: LOAD_COMMENTS,
+  payload
+});
+
+const loadCommentByPost = (payload) => ({
+  type: LOAD_COMMENTS_BY_POST,
   payload
 });
 
@@ -38,6 +44,21 @@ export const getAllComment = () => async (dispatch) => {
         }
 
         dispatch(loadComment(payload));
+    }
+}
+export const getAllCommentByPostId = (id) => async (dispatch) => {
+    const response = await fetch(`/api/comments/${id}`, {
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+    if (response.ok) {
+        const payload = await response.json();
+        if (payload.errors) {
+            return;
+        }
+
+        dispatch(loadCommentByPost(payload));
     }
 }
 
@@ -88,7 +109,7 @@ export const deleteAComment = (id) => async (dispatch) => {
     }
 };
 
-const initialState = {};
+const initialState = {comments: []};
 
 export default function commentReducer(state = initialState, action) {
     let newState = {}
@@ -96,6 +117,10 @@ export default function commentReducer(state = initialState, action) {
     switch (action.type) {
     case LOAD_COMMENTS:
         action.payload.forEach(el => newState[el.id] = el);
+        return newState
+    case LOAD_COMMENTS_BY_POST:
+        newState = {...state, comments:[...action.payload.comments]}
+        // action.payload.forEach(el => newState[el.id] = el);
         return newState
     case CREATE_COMMENT:
         newState = {...state}

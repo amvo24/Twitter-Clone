@@ -13,6 +13,13 @@ def get_all_comments():
     response = [comment.to_dict() for comment in comments]
     return {'comments': response}
 
+@comments_routes.route('/<int:postId>')
+@login_required
+def get_all_comments_by_post_id(postId):
+    comments = Comment.query.filter(Comment.post_id == postId).all()
+    response = [comment.to_dict() for comment in comments]
+    return {'comments': response}
+
 
 @comments_routes.route('/create/<int:postId>', methods=["POST"])
 @login_required
