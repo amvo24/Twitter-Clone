@@ -1,1 +1,46 @@
+.PostDetailsCenterColumn {
+    border-top: .5px solid rgb(240, 240, 240);
+    border-bottom: .5px solid rgb(240, 240, 240);
+    /* background-color: blue; */
+}
 
+.HomePageCenterColumnTitle {
+    /* background-color: aqua; */
+}
+
+.ActualPostUserInfo {
+    /* background-color: beige; */
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+
+.PostUserInfo_2938 {
+    display: flex;
+    flex-direction: row;
+}
+
+.comments_0249 {
+    margin-left: 10px;
+}
+
+.profilepiccontainer_349 {
+    height: 70px;
+    width: 70px;
+    /* background-color: cadetblue; */
+}
+
+.actualPic_20937 {
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+}
+
+.ActualPostBody {
+    /* background-color: blueviolet; */
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: xx-large;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}

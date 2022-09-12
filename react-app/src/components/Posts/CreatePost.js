@@ -37,7 +37,7 @@ const CreatePost = () => {
 
 
   return (
-    <div>
+    <div className='CreatePostContainer_235'>
     <div className='UserInfo'>
       <div className='ProfilePicContainer'>
           <img className='ProfilePic' src={user.profile_pic}/>

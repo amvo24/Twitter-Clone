@@ -20,7 +20,7 @@
 
 .left {
     width: 25%;
-    
+
 }
 
 .right {
@@ -52,7 +52,8 @@
 
 .HomePageCenterColumnTitle {
     text-align: left;
-    margin-left: 25px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .HomePageCenterColumn {

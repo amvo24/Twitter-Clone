@@ -48,7 +48,7 @@ const NavBar = () => {
         </NavLink>
       </li>
       <div className="spacerDivNavBar"></div>
-      <li>
+      <li className="IconContainer">
         <NavLink
           to="/sign-up"
           exact={true}
@@ -59,7 +59,7 @@ const NavBar = () => {
         </NavLink>
       </li>
       <div className="spacerDivNavBar"></div>
-      <li>
+      <li className="IconContainer">
         <NavLink
           to="/users"
           exact={true}
@@ -70,7 +70,7 @@ const NavBar = () => {
         </NavLink>
       </li>
       <div className="spacerDivNavBar"></div>
-      <li>
+      <li className="IconContainer">
         <div className="ProfileIcon">
           <svg
             xmlnsXlink="http://www.w3.org/1999/xlink"

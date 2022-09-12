@@ -1,0 +1,97 @@
+.CommentContainer_394 {
+    /* border-top: .5px solid rgb(240, 240, 240); */
+    border-bottom: .5px solid rgb(240, 240, 240);
+    /* background-color: chartreuse; */
+    display: flex;
+    flex-direction: column;
+    /* height: 100% */
+    /* width: 100%; */
+}
+
+.TopCommentContainer {
+    display: flex;
+    flex-direction: row;
+    /* background-color: blueviolet; */
+    height: 100%;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+
+.ImageCommentContainer {
+    height: 70px;
+    width: 70px;
+
+}
+
+.ProfilePicComments {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    /* background-color: red; */
+}
+
+.CommentContainingUserInfo {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    font-size: larger;
+}
+
+.user-name_283907 {
+    font-weight: bold;
+}
+
+.replyingto_9823 {
+    font-size: larger;
+    margin-left: 20px;
+    color: gray;
+    margin-top: 2px;
+}
+
+.MiddleCommentContainer {
+    height: 100px;
+    /* background-color: darksalmon; */
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: -30px;
+    font-size: larger;
+}
+
+.BottomCommentContainer {
+    /* background-color: chocolate; */
+    /* margin-right: 20px;
+    margin-left: 20px; */
+    /* margin-bottom: -10px; */
+    margin-top: -40px;
+}
+.TweetDeleteButtonDiv {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+}
+
+.TweetDeleteButtonDiv:hover {
+    background-color: rgba(255, 3, 3, 0.261);
+    border-radius: 100%;
+
+}
+
+.TweetDeleteButton {
+   margin-left: 5px;
+}
+
+.TweetCommentButton {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+}
+
+.TweetCommentButton:hover {
+    background-color:rgba(95, 201, 243, 0.327);
+    border-radius: 100%;
+}
