@@ -5,7 +5,6 @@ import CreateComment from './CreateComment'
 import './CommentModal.css'
 
 
-
 function CreateCommentModal({id}) {
     const [showModal, setShowModal] = useState(false)
     const post = useSelector((state) => state.posts[id])

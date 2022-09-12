@@ -10,13 +10,12 @@ const LogoutButton = () => {
   };
 
   return (
-  <div className='TwitterBlueButton'>
-    <div>
-      
-    </div>
-
-    {/* <button onClick={onLogout}>Logout</button>; */}
-  </div>
+  // <div onClick={onLogout} className='TwitterBlueButton'>
+  //   <div className='WordContainer'>
+  //   <div className='LogoutWord'>Log Out</div>
+  //   </div>
+  // </div>
+  <button onClick={onLogout}>Log Out</button>
   )
 };
 

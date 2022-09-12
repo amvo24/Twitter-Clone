@@ -5,7 +5,7 @@ import LoginForm from './components/auth/LoginForm';
 import SignUpForm from './components/auth/SignUpForm';
 import ProtectedRoute from './components/auth/ProtectedRoute';
 import UsersList from './components/NavBar_User_UserList/UsersList';
-import User from './components/NavBar_User_UserList/User';
+import User from './components/ProfilePage/User';
 import HomeComponent from './components/HomePage';
 import PostDetail from './components/Posts/PostDetails';
 import { authenticate } from './store/session';

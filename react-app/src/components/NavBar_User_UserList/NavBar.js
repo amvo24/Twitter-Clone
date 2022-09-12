@@ -1,7 +1,7 @@
-
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import LogoutButton from '../auth/LogoutButton';
+import CreatePostModal from '../Posts/CreatePostModal';
 import './NavBar.css'
 
 const NavBar = () => {
@@ -102,6 +102,9 @@ const NavBar = () => {
       <div className="spacerDivNavBar"></div>
       <li>
         <LogoutButton />
+      </li>
+      <li>
+      <CreatePostModal />
       </li>
     </nav>
   );
