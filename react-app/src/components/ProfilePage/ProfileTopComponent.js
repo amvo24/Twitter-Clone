@@ -13,13 +13,15 @@ function ProfileTopComponent({user}) {
             <div className="ProfilePageImageContainer">
                 <img className="ProfilePageProfileImage_392" src={user.profile_pic}/>
             </div>
-            <div className="name_9823">{user.name}</div>
-            <div className="username_9823">{`@${user.username}`}</div>
-            <div className="bio">I'm finally getting the hang of twitter</div>
-            <div className="ProfilePagePlaceBirthJoined">
-                <div className="Place">Place</div>
-                <div className="BirthYear">BirthYear</div>
-                <div className="Joined">Joined October 2012</div>
+            <div className="ProfilePageDetails">
+                <div className="name_9823">{user.name}</div>
+                <div className="username_9823">{`@${user.username}`}</div>
+                <div className="bio">I'm finally getting the hang of twitter</div>
+                <div className="ProfilePagePlaceBirthJoined">
+                    <div className="Place">Place</div>
+                    <div className="BirthYear">BirthYear</div>
+                    <div className="Joined">Joined October 2012</div>
+                </div>
             </div>
             <div className="ProfilePageBottomNavBar">
                 <div className="TweetsNavBar">Tweets</div>

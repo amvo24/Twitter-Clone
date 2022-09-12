@@ -70,7 +70,7 @@ function GetPosts() {
               : null
               }
 
-              </Link>
+            </Link>
               <div className="TweetBottomBar">
                 <div className="TweetCommentButton">
                   <CreateCommentModal id={post.id} />

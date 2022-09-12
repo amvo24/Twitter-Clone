@@ -4,6 +4,8 @@ import NavBar from '../NavBar_User_UserList/NavBar';
 import CriticismWidget from '../Widgets/CriticismWidget';
 import SocialsWidget from '../Widgets/SocialsWidget';
 import ProfileTopComponent from './ProfileTopComponent';
+import GetAllPostsFromUser from "../Posts/GetAllPostsfromUser";
+
 
 
 function User() {
@@ -45,6 +47,7 @@ function User() {
             {user.name}
             </h2>
             <ProfileTopComponent user={user}/>
+            <GetAllPostsFromUser user={user}/>
             {/* <CreatePost /> */}
             {/* <GetPosts /> */}
         </div>

@@ -35,6 +35,10 @@
 }
 
 /* ------ PROFILE DETAILS ------- */
+.ProfilePageDetails {
+    margin-left: 20px;
+}
+
 .ProfilePagePlaceBirthJoined {
     display: flex;
     flex-direction: row;
@@ -48,4 +52,17 @@
 
 .name_9823 {
     font-weight: bold;
+    font-size: xx-large;
+
+}
+
+.username_9823 {
+    font-size: large;
+    color: gray;
+}
+
+.ProfilePageBottomNavBar {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 30px;
 }
