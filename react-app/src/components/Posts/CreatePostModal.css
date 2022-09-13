@@ -13,6 +13,11 @@
     height: 40px;
 }
 
+.TwitterBlueButton:hover {
+    background-color: rgb(3, 137, 226);
+
+}
+
 .WordContainer {
     display: flex;
     justify-content: center;

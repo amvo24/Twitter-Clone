@@ -1,31 +1,37 @@
 .kjdhsbf2390 {
     display: flex;
     flex-direction: column;
-    background-color: blueviolet;
-    height: 650px;
-}
-
-li {
-    list-style: none;
-    /* margin-top: 20px; */
+    /* background-color: blueviolet; */
+    height: 630px;
+    margin-top: 10px;
 }
 
 .IconContainer {
     display: flex;
     flex-direction: row;
-    background-color: aqua;
+    /* background-color: aqua; */
     height: 10%;
-    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 35px;
+    /* margin-bottom: 50px; */
+    margin: 4px 2px;
+}
 
+.IconContainer:hover {
+    background-color: rgb(215, 215, 215);
 }
 
 .SVGIcon {
-    width: 40%;
+    width: 22%;
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
 }
 
-.HomeText {
-    margin-top: -2px;
-    margin-left: 10px;
+.NavText {
+   display: flex;
+   align-items: center;
 }
 
 .NavBarLinks {
@@ -36,8 +42,7 @@ li {
 }
 
 .spacerDivNavBar {
-    margin-top: 50px;
-    margin-bottom: 30px;
+   /* margin-top: 10px; */
 }
 
 .CPmodalNavBar {

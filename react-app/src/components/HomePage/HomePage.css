@@ -21,6 +21,8 @@
 .BIRDIMGCONTAINER {
     height: 50px;
     width: 50px;
+    margin-left: 13px;
+    margin-top: 10px;
 }
 
 .BIRDIMG {
