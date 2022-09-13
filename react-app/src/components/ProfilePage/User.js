@@ -5,12 +5,14 @@ import CriticismWidget from '../Widgets/CriticismWidget';
 import SocialsWidget from '../Widgets/SocialsWidget';
 import ProfileTopComponent from './ProfileTopComponent';
 import GetAllPostsFromUser from "../Posts/GetAllPostsfromUser";
+import './User.css'
 
 
 
 function User() {
   const [user, setUser] = useState({});
   const { userId }  = useParams();
+
 
   useEffect(() => {
     if (!userId) {
@@ -29,11 +31,11 @@ function User() {
 
   return (
     <>
+    <div className='MainContainer_23089'>
     <div className='HomePageColumns left'>
         <div className='HomePageLeft'>
           {/* <div className='HomePageInnerLeft Column1'>Random</div> */}
           <div className='HomePageInnerLeft Column2'>
-            {/* <h2>NAVIGATION</h2> */}
             <div className='BIRDIMGCONTAINER'>
             <img className='BIRDIMG' src='https://icon-library.com/images/twitter-bird-icon-png/twitter-bird-icon-png-23.jpg'/>
             </div>
@@ -61,6 +63,7 @@ function User() {
           </div>
           <div className='HomePageInnerRight2'></div>
         </div>
+    </div>
     </div>
     </>
   );

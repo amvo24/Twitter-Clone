@@ -2,12 +2,15 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 import { Redirect } from 'react-router-dom';
 import { signUp } from '../../store/session';
+import './SignUpForm.css'
+
 
 const SignUpForm = () => {
   const [errors, setErrors] = useState([]);
   const [username, setUsername] = useState('');
   const [name, setName] = useState('');
   const [profilePic, setProfilePic] = useState('');
+  const [bannerPic, setBannerPic] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [repeatPassword, setRepeatPassword] = useState('');
@@ -31,7 +34,11 @@ const SignUpForm = () => {
   const updateName = (e) => {
     setName(e.target.value);
   };
+
   const updateProfilePic = (e) => {
+    setProfilePic(e.target.value);
+  };
+  const updateBannerPic = (e) => {
     setProfilePic(e.target.value);
   };
 
@@ -48,11 +55,11 @@ const SignUpForm = () => {
   };
 
   if (user) {
-    return <Redirect to='/home' />;
+    return <Redirect to='/' />;
   }
 
   return (
-    <form onSubmit={onSignUp}>
+    <form className='SignUpForm' onSubmit={onSignUp}>
       <div>
         {errors.map((error, ind) => (
           <div key={ind}>{error}</div>
@@ -76,7 +83,7 @@ const SignUpForm = () => {
           value={name}
         ></input>
       </div>
-      <div>
+      {/* <div>
         <label>Profile Pic</label>
         <input
           type='text'
@@ -84,7 +91,16 @@ const SignUpForm = () => {
           onChange={updateProfilePic}
           value={profilePic}
         ></input>
-      </div>
+      </div> */}
+      {/* <div>
+        <label>Banner Pic</label>
+        <input
+          type='text'
+          name='bannerPic'
+          onChange={updateBannerPic}
+          value={bannerPic}
+        ></input>
+      </div> */}
       <div>
         <label>Email</label>
         <input

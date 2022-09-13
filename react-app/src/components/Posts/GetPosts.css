@@ -16,6 +16,7 @@
 .TweetUserContainer {
     margin: 15px 10px 25px 10px;
     text-align: left;
+
 }
 
 .TweetUserContainer123 {
@@ -82,6 +83,15 @@
     margin-right: 20px;
 
 
+}
+
+.TweetLikesDiv {
+    display: flex;
+    flex-direction: row;
+}
+
+.NumberofLikes {
+    margin-left: 10px;
 }
 
 .TweetDeleteButton {

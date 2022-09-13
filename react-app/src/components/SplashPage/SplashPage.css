@@ -1,0 +1,136 @@
+.MainSplashPageContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.TopPartSplash {
+    display: flex;
+    flex-direction: row;
+    margin-top: -20px;
+
+}
+
+.Column1_splashPage {
+    width: 55%;
+    height: 950px;
+    display: flex;
+    position: relative;
+
+}
+
+.LandingPageImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+
+}
+
+.birdie {
+    /* background-color: red; */
+    margin-top: 200px;
+    margin-left: 100px;
+    position: absolute;
+
+}
+
+
+/* ------ Functionality Side ------ */
+
+.Column2_SplashPage {
+    width: 45%;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.LoginAndSignup {
+    display: flex;
+    flex-direction: column;
+    /* background-color: brown; */
+    width: 90%;
+    height: 90%;
+}
+
+.BIRDIMGCONTAINER_SplashPage {
+    height: 10%;
+    width: 100%;
+    /* background-color: chartreuse; */
+}
+
+.BIRDIMG_SplashPage {
+    height: 100px;
+    width: 100px;
+}
+
+.HappeningNowDiv {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    /* background-color: aquamarine; */
+    align-items: center;
+}
+
+.HappeningNow {
+    display: flex;
+    font-weight: bolder;
+    align-items: center;
+    font-family: inherit;
+    font-size: 75px;
+    height: 70%;
+    width: 100%;
+    font-stretch: expanded;
+}
+
+.Join {
+    height: 10%;
+    width: 100%;
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 40px;
+}
+
+.BottomPartSplash {
+    display: flex;
+    flex-direction: column;
+    height: 60%;
+    width: 100%;
+    /* background-color: blueviolet; */
+}
+
+.Signup_2938 {
+    /* background-color: aqua; */
+    height: 42.5%;
+    display: flex;
+    align-items: center;
+}
+
+.AlreadyAccount {
+    display: flex;
+    align-items: center;
+    /* background-color: chartreuse; */
+    height: 15%;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.Login_2397 {
+    /* background-color: coral; */
+    height: 42.5%;
+    display: flex;
+    align-items: center;
+}
+
+
+.SplashPageFooter{
+    /* background-color: darkgreen; */
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: large;
+
+}

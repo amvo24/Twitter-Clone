@@ -46,11 +46,9 @@ def update_post_by_id(id):
     form = PostForm()
     form['csrf_token'].data = request.cookies['csrf_token']
     if form.validate_on_submit():
-        # post = Post(
         post.body=form.data['body']
         post.images=form.data['images']
-        #)
-        # db.session.add(post)
+        
         db.session.commit()
         return post.to_dict()
 

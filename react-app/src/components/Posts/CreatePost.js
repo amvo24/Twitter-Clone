@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 import { createOnePost } from '../../store/posts';
+import { Link } from 'react-router-dom'
 import './CreatePost.css'
 
 
@@ -39,9 +40,12 @@ const CreatePost = () => {
   return (
     <div className='CreatePostContainer_235'>
     <div className='UserInfo'>
-      <div className='ProfilePicContainer'>
-          <img className='ProfilePic' src={user.profile_pic}/>
-      </div>
+      <Link to={`/users/${user.id}`}>
+        <div className='ProfilePicContainer'>
+            <img className='ProfilePic' src={user.profile_pic}/>
+        </div>
+
+      </Link>
       <div className='CPUsernamecontainer'>
           <div className='CreatePostUsersName'>
             {user.name}

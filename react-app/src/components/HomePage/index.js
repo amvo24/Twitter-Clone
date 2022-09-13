@@ -10,6 +10,7 @@ function HomeComponent() {
 
   return (
     <>
+    <div className='MainContainer_23089'>
     <div className='HomePageColumns left'>
         <div className='HomePageLeft'>
           {/* <div className='HomePageInnerLeft Column1'>Random</div> */}
@@ -40,6 +41,7 @@ function HomeComponent() {
           </div>
           <div className='HomePageInnerRight2'></div>
         </div>
+    </div>
     </div>
 
     </>

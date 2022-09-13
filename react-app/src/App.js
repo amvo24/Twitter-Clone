@@ -8,6 +8,7 @@ import UsersList from './components/NavBar_User_UserList/UsersList';
 import User from './components/ProfilePage/User';
 import HomeComponent from './components/HomePage';
 import PostDetail from './components/Posts/PostDetails';
+import SplashPage from './components/SplashPage/SplashPage';
 import { authenticate } from './store/session';
 
 function App() {
@@ -28,19 +29,19 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path='/login' exact={true}>
-          <LoginForm />
+        <Route path='/' exact={true}>
+          <SplashPage />
         </Route>
-        <Route path='/sign-up' exact={true}>
+        {/* <Route path='/sign-up' exact={true}>
           <SignUpForm />
-        </Route>
+        </Route> */}
         <ProtectedRoute path='/users' exact={true} >
           <UsersList/>
         </ProtectedRoute>
         <ProtectedRoute path='/users/:userId' exact={true} >
           <User />
         </ProtectedRoute>
-        <ProtectedRoute path='/home' exact={true} >
+        <ProtectedRoute path='/' exact={true} >
           <HomeComponent />
         </ProtectedRoute>
         <ProtectedRoute path='/post/:id' exact={true} >

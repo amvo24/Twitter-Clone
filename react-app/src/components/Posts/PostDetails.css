@@ -36,6 +36,10 @@
     border-radius: 100px;
 }
 
+.actualPic_20937:hover {
+    filter: brightness(90%);
+}
+
 .ActualPostBody {
     /* background-color: blueviolet; */
     margin-left: 20px;

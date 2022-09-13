@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams} from "react-router-dom";
+import { useParams, Link} from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux';
 import { getOnePost, deleteAPost } from '../../store/posts'
 import NavBar from '../NavBar_User_UserList/NavBar'
@@ -63,7 +63,9 @@ function PostDetail() {
                 .map((trueUser) => (
                   <div className='PostUserInfo_2938' key={trueUser.id}>
                     <div className='profilepiccontainer_349'>
+                      <Link to={`/users/${post.user_id}`}>
                     <img className='actualPic_20937' src={trueUser.profile_pic}/>
+                      </Link>
                     </div>
                     <div className="TweetName comments_0249">
                     {trueUser.name}
