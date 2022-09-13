@@ -10,8 +10,15 @@ function ProfileTopComponent({user}) {
             <div className="BannerImg">
                 <img className="ActualBannerImg" src={user.banner_pic}/>
             </div>
-            <div className="ProfilePageImageContainer">
-                <img className="ProfilePageProfileImage_392" src={user.profile_pic}/>
+            <div className="ImageAndEditButton">
+                <div className="ProfilePageImageContainer">
+                    <img className="ProfilePageProfileImage_392" src={user.profile_pic}/>
+                </div>
+                <div className="EditButtonContainer">
+                    <div className="EditText_34789">
+                        Edit profile
+                    </div>
+                </div>
             </div>
             <div className="ProfilePageDetails">
                 <div className="name_9823">{user.name}</div>
@@ -23,6 +30,7 @@ function ProfileTopComponent({user}) {
                     <div className="Joined">Joined {user.joined}</div>
                 </div>
             </div>
+
             <div className="ProfilePageBottomNavBar">
                 <div className="TweetsNavBar">Tweets</div>
                 <div className="TweetsAndReplies">TweetsAndReplies</div>

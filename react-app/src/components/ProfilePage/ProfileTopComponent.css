@@ -1,6 +1,7 @@
 .ProfileTopComponentContainer {
     display: flex;
     flex-direction: column;
+    /* background-color: blue; */
 }
 
 /*----- BANNER IMAGE -----*/
@@ -16,6 +17,13 @@
 }
 
 /*----- PROFILE PIC -----*/
+
+.ImageAndEditButton {
+    display: flex;
+    flex-direction: row;
+    /* background-color: brown; */
+}
+
 .ProfilePageImageContainer {
     width: 150px;
     height: 150px;
@@ -29,19 +37,43 @@
 }
 
 
-
 .ProfilePageProfileImage_392 {
     border-radius: 50%;
     /* object-fit: cover; */
     width: 140px;
     height: 140px;
+}
 
+/*  ---- EDIT BUTTON ---- */
 
+.EditButtonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 430px;
+    border: 1px solid rgb(215, 215, 215);
+    /* background-color: chartreuse; */
+    border-radius: 50px;
+    height: 45px;
+    width: 140px;
+    margin-top: 115px;
+    cursor: pointer;
+}
+
+.EditButtonContainer:hover {
+    background-color: rgb(215, 215, 215);
+}
+
+.EditText_34789 {
+    font-weight: 500;
+    font-size: large;
 }
 
 /* ------ PROFILE DETAILS ------- */
 .ProfilePageDetails {
     margin-left: 20px;
+    /* background-color: aqua; */
+    margin-right: 20px;
 }
 
 .ProfilePagePlaceBirthJoined {

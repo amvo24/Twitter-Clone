@@ -44,15 +44,16 @@ const CreatePost = () => {
         <div className='ProfilePicContainer'>
             <img className='ProfilePic' src={user.profile_pic}/>
         </div>
-
       </Link>
       <div className='CPUsernamecontainer'>
+      <Link className='CPUsernameLink' to={`/users/${user.id}`}>
           <div className='CreatePostUsersName'>
             {user.name}
           </div>
           <div className='CreatePostUsername'>
             {'@' + user.username}
           </div>
+      </Link>
       </div>
     </div>
     <form onSubmit={handleSubmit} className="CreatePostForm">
