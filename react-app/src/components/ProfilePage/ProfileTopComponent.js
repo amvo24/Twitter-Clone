@@ -16,11 +16,11 @@ function ProfileTopComponent({user}) {
             <div className="ProfilePageDetails">
                 <div className="name_9823">{user.name}</div>
                 <div className="username_9823">{`@${user.username}`}</div>
-                <div className="bio">I'm finally getting the hang of twitter</div>
+                <div className="bio">{user.bio}</div>
                 <div className="ProfilePagePlaceBirthJoined">
                     <div className="Place">Place</div>
-                    <div className="BirthYear">BirthYear</div>
-                    <div className="Joined">Joined October 2012</div>
+                    <div className="BirthYear">{user.birthday}</div>
+                    <div className="Joined">Joined {user.joined}</div>
                 </div>
             </div>
             <div className="ProfilePageBottomNavBar">

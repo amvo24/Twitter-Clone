@@ -1,17 +1,26 @@
 .kjdhsbf2390 {
     display: flex;
     flex-direction: column;
+    background-color: blueviolet;
+    height: 650px;
 }
 
 li {
     list-style: none;
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 
 .IconContainer {
     display: flex;
     flex-direction: row;
+    background-color: aqua;
+    height: 10%;
+    margin-top: 10px;
 
+}
+
+.SVGIcon {
+    width: 40%;
 }
 
 .HomeText {
@@ -29,4 +38,8 @@ li {
 .spacerDivNavBar {
     margin-top: 50px;
     margin-bottom: 30px;
+}
+
+.CPmodalNavBar {
+    margin-top: 350px;
 }
