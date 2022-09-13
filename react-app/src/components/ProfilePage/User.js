@@ -5,14 +5,16 @@ import CriticismWidget from '../Widgets/CriticismWidget';
 import SocialsWidget from '../Widgets/SocialsWidget';
 import ProfileTopComponent from './ProfileTopComponent';
 import GetAllPostsFromUser from "../Posts/GetAllPostsfromUser";
+import BottomProfileButton from '../NavBar_User_UserList/BottomProfileButton';
 import './User.css'
+import { useSelector } from 'react-redux';
 
 
 
 function User() {
   const [user, setUser] = useState({});
   const { userId }  = useParams();
-
+  const currentUser = useSelector((state) => state.session.user)
 
   useEffect(() => {
     if (!userId) {
@@ -40,6 +42,9 @@ function User() {
             <img className='BIRDIMG' src='https://icon-library.com/images/twitter-bird-icon-png/twitter-bird-icon-png-23.jpg'/>
             </div>
             <NavBar />
+            <div className='BottomProfileButtonComponent'>
+            <BottomProfileButton user={currentUser}/>
+            </div>
           </div>
         </div>
     </div>

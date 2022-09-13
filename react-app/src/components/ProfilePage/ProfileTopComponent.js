@@ -8,7 +8,7 @@ function ProfileTopComponent({user}) {
         <>
         <div className="ProfileTopComponentContainer">
             <div className="BannerImg">
-                <img className="ActualBannerImg" src='https://cdn.wallpapersafari.com/5/3/l4ZCMe.jpg'/>
+                <img className="ActualBannerImg" src={user.banner_pic}/>
             </div>
             <div className="ProfilePageImageContainer">
                 <img className="ProfilePageProfileImage_392" src={user.profile_pic}/>

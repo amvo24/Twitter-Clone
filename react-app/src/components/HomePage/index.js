@@ -3,10 +3,13 @@ import NavBar from '../NavBar_User_UserList/NavBar'
 import CreatePost from '../Posts/CreatePost';
 import CriticismWidget from '../Widgets/CriticismWidget';
 import SocialsWidget from '../Widgets/SocialsWidget';
+import BottomProfileButton from '../NavBar_User_UserList/BottomProfileButton';
+import { useSelector } from 'react-redux';
 import './HomePage.css'
 
 
 function HomeComponent() {
+  const user = useSelector((state) => state.session.user)
 
   return (
     <>
@@ -20,6 +23,9 @@ function HomeComponent() {
             <img className='BIRDIMG' src='https://icon-library.com/images/twitter-bird-icon-png/twitter-bird-icon-png-23.jpg'/>
             </div>
             <NavBar />
+            <div className='BottomProfileButtonComponent'>
+            <BottomProfileButton user={user}/>
+            </div>
           </div>
         </div>
     </div>
