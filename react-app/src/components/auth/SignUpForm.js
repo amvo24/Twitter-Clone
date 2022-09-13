@@ -9,9 +9,10 @@ const SignUpForm = () => {
   const [errors, setErrors] = useState([]);
   const [username, setUsername] = useState('');
   const [name, setName] = useState('');
-  const [profilePic, setProfilePic] = useState('');
-  const [bannerPic, setBannerPic] = useState('');
+  // const [profilePic, setProfilePic] = useState('');
+  // const [bannerPic, setBannerPic] = useState('');
   const [email, setEmail] = useState('');
+  const [birthday, setBirthday] = useState('');
   const [password, setPassword] = useState('');
   const [repeatPassword, setRepeatPassword] = useState('');
   const user = useSelector(state => state.session.user);
@@ -35,14 +36,18 @@ const SignUpForm = () => {
     setName(e.target.value);
   };
 
-  const updateProfilePic = (e) => {
-    setProfilePic(e.target.value);
-  };
-  const updateBannerPic = (e) => {
-    setProfilePic(e.target.value);
-  };
+  // const updateProfilePic = (e) => {
+  //   setProfilePic(e.target.value);
+  // };
+  // const updateBannerPic = (e) => {
+  //   setProfilePic(e.target.value);
+  // };
 
   const updateEmail = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const updateBirthday = (e) => {
     setEmail(e.target.value);
   };
 
@@ -55,7 +60,7 @@ const SignUpForm = () => {
   };
 
   if (user) {
-    return <Redirect to='/' />;
+    return <Redirect to='/home' />;
   }
 
   return (
@@ -107,6 +112,15 @@ const SignUpForm = () => {
           type='text'
           name='email'
           onChange={updateEmail}
+          value={email}
+        ></input>
+      </div>
+      <div>
+        <label>Date of Birth</label>
+        <input
+          type=''
+          name='birthday'
+          onChange={updateBirthday}
           value={email}
         ></input>
       </div>

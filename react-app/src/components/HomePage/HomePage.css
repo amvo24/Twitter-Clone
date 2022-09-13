@@ -38,7 +38,7 @@
 }
 
 .middle {
-    width: 39%;
+    width: 37%;
     border-left: .5px solid rgb(240, 240, 240);
     border-right: .5px solid rgb(240, 240, 240);
 
@@ -82,7 +82,7 @@
 
 .HomePageRightColumn {
     text-align: left;
-    margin-left: 30px;
+    /* margin-left: 20px; */
     display: flex;
     flex-direction: row;
 
