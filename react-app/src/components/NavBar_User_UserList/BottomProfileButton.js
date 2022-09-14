@@ -1,5 +1,8 @@
 import React, {useState, useEffect} from "react";
 import './BottomProfileButton.css'
+import LogoutButton from "../auth/LogoutButton";
+import LoginModal from "../auth/LoginModal"
+import LoginForm from "../auth/LoginForm";
 
 function BottomProfileButton({user}) {
     const [showMenu, setShowMenu] = useState(false)
@@ -53,10 +56,15 @@ function BottomProfileButton({user}) {
                 </div>
                 <div className="bottomOfMenu_23907">
                     <div className="AddAnotherAccount">
-                        <div className="Text_9032">Add An Existing Account</div>
+                        <div className="Text_9032">
+                            Add Another Account
+                            <div>
+                                {/* <LoginModal /> */}
+                            </div>
+                        </div>
                     </div>
                     <div className="LogOut_23907">
-                        <div className="Text_9032">Log Out</div>
+                        <LogoutButton />
                     </div>
                 </div>
             </div>

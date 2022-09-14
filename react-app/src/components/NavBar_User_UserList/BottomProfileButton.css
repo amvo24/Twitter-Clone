@@ -76,7 +76,7 @@
     /* border: 1px solid white; */
     background-color: white;
     position: absolute;
-    width: 395px;
+    width: 400px;
     height: 250px;
     bottom: 140px;
     left: 200px;
@@ -164,12 +164,9 @@
     display: flex;
     align-items: center;
     height: 50%;
+    /* background-color: blueviolet; */
 }
 
 .LogOut_23907:hover {
     background-color: rgb(240, 240, 240);
-}
-
-.Text_9032 {
-    margin-left: 20px;
 }

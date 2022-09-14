@@ -1,0 +1,12 @@
+.Text_9032 {
+    /* background-color: coral; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.TextHere_9032 {
+    margin-left: 20px;
+    font-size: large;
+}

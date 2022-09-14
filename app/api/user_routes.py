@@ -31,7 +31,7 @@ def editUser(id):
         user.bio=form.data['bio'],
         user.name=form.data['name'],
         user.profile_pic=form.data['profile_pic'],
-        user.bio=form.data['bio'],
+        user.banner_pic=form.data['banner_pic'],
         user.username=form.data['username'],
         user.email=form.data['email'],
         user.birthday=form.data['birthday'],

@@ -39,7 +39,6 @@
 
 .ProfilePageProfileImage_392 {
     border-radius: 50%;
-    /* object-fit: cover; */
     width: 140px;
     height: 140px;
 }
@@ -64,10 +63,7 @@
     background-color: rgb(215, 215, 215);
 }
 
-.EditText_34789 {
-    font-weight: 500;
-    font-size: large;
-}
+
 
 /* ------ PROFILE DETAILS ------- */
 .ProfilePageDetails {

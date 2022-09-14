@@ -7,21 +7,19 @@ import './LogoutButton.css'
 const LogoutButton = () => {
   const user = useSelector((state) => state.session.user)
   const dispatch = useDispatch()
+
   const onLogout = async (e) => {
     await dispatch(logout());
   };
 
-  // if (!user) {
-  //   return <Redirect to='/' />
-  // }
+  if (!user) {
+    return <Redirect to='/' />
+  }
 
   return (
-  // <div onClick={onLogout} className='TwitterBlueButton'>
-  //   <div className='WordContainer'>
-  //   <div className='LogoutWord'>Log Out</div>
-  //   </div>
-  // </div>
-  <button onClick={onLogout}>Log Out</button>
+    <div onClick={onLogout} className="Text_9032">
+      <div className='TextHere_9032'>{`Log out @${user.username}`}</div>
+    </div>
   )
 };
 

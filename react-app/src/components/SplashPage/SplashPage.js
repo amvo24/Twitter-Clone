@@ -1,6 +1,9 @@
 import React from "react";
 import LoginForm from "../auth/LoginForm";
 import SignUpForm from "../auth/SignUpForm";
+import LoginModal from "../auth/LoginModal";
+import SignUpFormModal from "../auth/SignUpFormModal";
+import DemoUser from "../auth/DemoUser";
 import './SplashPage.css'
 
 function SplashPage() {
@@ -31,20 +34,23 @@ function SplashPage() {
                         </div>
                         <div className="BottomPartSplash">
                             <div className="Signup_2938">
-                                <div className="SignUpContainer">
+                                {/* <div className="SignUpContainer">
                                     <div className="SignUpText_2938">Sign up with email</div>
-                                </div>
+                                </div> */}
+                                <SignUpFormModal />
                             </div>
                             <div className="AlreadyAccount">
                                 Already have an account?
                             </div>
                             <div className="Login_2397">
-                                <div className="LoginDiv_2397">
+                                {/* <div className="LoginDiv_2397">
                                     <div className="LoginText_2397">Sign in</div>
-                                </div>
-                                <div className="LoginAsDemo_2397">
+                                </div> */}
+                                <LoginModal />
+                                {/* <div className="LoginAsDemo_2397">
                                     <div className="DemoText_2397">Demo user</div>
-                                </div>
+                                </div> */}
+                                <DemoUser />
                             </div>
                         </div>
                     </div>
