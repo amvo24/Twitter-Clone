@@ -31,13 +31,20 @@ function SplashPage() {
                         </div>
                         <div className="BottomPartSplash">
                             <div className="Signup_2938">
-                                <SignUpForm />
+                                <div className="SignUpContainer">
+                                    <div className="SignUpText_2938">Sign up with email</div>
+                                </div>
                             </div>
                             <div className="AlreadyAccount">
                                 Already have an account?
                             </div>
                             <div className="Login_2397">
-                                <LoginForm />
+                                <div className="LoginDiv_2397">
+                                    <div className="LoginText_2397">Sign in</div>
+                                </div>
+                                <div className="LoginAsDemo_2397">
+                                    <div className="DemoText_2397">Demo user</div>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -101,11 +101,35 @@
     /* background-color: blueviolet; */
 }
 
+
 .Signup_2938 {
     /* background-color: aqua; */
     height: 42.5%;
     display: flex;
+
+}
+
+.SignUpContainer {
+    background-color: rgb(29, 155, 240);
+    display: flex;
+    height: 60px;
+    width: 350px;
     align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    margin-top: 10px;
+    cursor: pointer;
+
+}
+
+.SignUpContainer:hover {
+    background-color: rgb(3, 137, 226);
+}
+
+.SignUpText_2938 {
+    font-weight: bold;
+    font-size: larger;
+    color: white;
 }
 
 .AlreadyAccount {
@@ -121,9 +145,55 @@
     /* background-color: coral; */
     height: 42.5%;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+
 }
 
+.LoginDiv_2397 {
+    border: .5px solid rgb(214, 214, 214);
+    background-color: white;
+    height: 60px;
+    width: 350px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.LoginDiv_2397:hover {
+    background-color: rgba(29, 156, 240, 0.216);
+}
+
+.LoginText_2397 {
+    font-size: larger;
+    font-weight: bold;
+    color: rgb(29, 155, 240);
+}
+
+.LoginAsDemo_2397 {
+    border: .5px solid rgb(214, 214, 214);
+    background-color: white;
+    height: 60px;
+    width: 350px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.LoginAsDemo_2397:hover {
+    background-color: rgba(29, 156, 240, 0.216);
+}
+
+.DemoText_2397 {
+    font-size: larger;
+    font-weight: bold;
+    color: rgb(29, 155, 240);
+}
 
 .SplashPageFooter{
     /* background-color: darkgreen; */
