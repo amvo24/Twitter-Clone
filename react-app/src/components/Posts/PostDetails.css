@@ -20,7 +20,25 @@
     flex-direction: row;
 }
 
+.UsernameLink_849:link {
+    text-decoration: none;
+    color: black;
+}
+
+.UsernameLink_849:visited {
+    color: black;
+}
+
 .comments_0249 {
+    margin-left: 10px;
+}
+
+.comments_0249:link {
+    color: black;
+    text-decoration: none;
+}
+
+.TweetUsername {
     margin-left: 10px;
 }
 

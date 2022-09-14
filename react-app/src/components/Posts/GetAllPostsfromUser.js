@@ -10,7 +10,7 @@ function GetAllPostsFromUser({user}) {
     const posts = useSelector((state) => state.posts)
     const currentUser = useSelector((state) => state.session.user)
     const postsArray = Object.values(posts).reverse()
-    
+
 
     useEffect(() => {
         dispatch(getAllPosts())
@@ -28,7 +28,7 @@ function GetAllPostsFromUser({user}) {
           .filter((singlePost) => user.id === singlePost.user_id)
           .map((post) => (
             <div className="TweetContainer" key={post.id}>
-              <Link to={`./post/${post.id}`} className="TweetLink">
+              <Link to={`/post/${post.id}`} className="TweetLink">
                 <div className="TweetUserContainer">
                   <div className="TweetContainerTopHalf">
                     {user && user.id === post.user_id && (

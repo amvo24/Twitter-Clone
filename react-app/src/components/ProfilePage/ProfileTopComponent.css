@@ -82,6 +82,11 @@
     justify-content: space-around;
 }
 
+.Container_93278 {
+    display: flex;
+    flex-direction: row;
+}
+
 .ProfilePageBottomNavBar {
     display: flex;
     flex-direction: row;
@@ -99,8 +104,85 @@
     color: gray;
 }
 
+.bio {
+    margin-top: 20px;
+    font-size: large;
+}
+
+.Place {
+    margin-left: 5px;
+}
+
+.BirthYear {
+    margin-left: 5px;
+}
+
+.Joined {
+    margin-left: 5px;
+}
+
+.ProfilePagePlaceBirthJoined {
+    margin-top: 15px;
+}
+
 .ProfilePageBottomNavBar {
-    margin-left: 20px;
-    margin-right: 20px;
     margin-top: 30px;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    cursor: pointer;
+}
+
+.ProfilePageBottomNavBarTweets {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    font-weight: 500;
+}
+
+.ProfilePageBottomNavBarTweets:hover {
+    background-color:  rgb(215, 215, 215);
+}
+
+.ProfilePageBottomNavBarTweetsAndReplies {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    font-weight: 500;
+}
+
+.ProfilePageBottomNavBarTweetsAndReplies:hover {
+    background-color:  rgb(215, 215, 215);
+}
+
+.ProfilePageBottomNavBarMedia {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    font-weight: 500;
+}
+
+.ProfilePageBottomNavBarMedia:hover {
+    background-color:  rgb(215, 215, 215);
+}
+
+
+.ProfilePageBottomNavBarLikes {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    font-weight: 500;
+}
+
+.ProfilePageBottomNavBarLikes:hover {
+    background-color:  rgb(215, 215, 215);
 }

@@ -39,6 +39,7 @@ function PostDetail() {
 
     return (
       <>
+      <div className='MainContainer_23089'>
         <div className="HomePageColumns left">
           <div className="HomePageLeft">
             {/* <div className='HomePageInnerLeft Column1'>Random</div> */}
@@ -67,13 +68,16 @@ function PostDetail() {
                     <img className='actualPic_20937' src={trueUser.profile_pic}/>
                       </Link>
                     </div>
-                    <div className="TweetName comments_0249">
-                    {trueUser.name}
-                        <div className="TweetUsername">
-                          {"@" + trueUser.username}
-                        </div>
-
-                    </div>
+                    <div className='UsernameLink_849'>
+                    <Link className='UsernameLink_849' to={`/users/${post.user_id}`}>
+                      <div className="TweetName comments_0249">
+                      {trueUser.name}
+                      </div>
+                          <div className="TweetUsername">
+                            {"@" + trueUser.username}
+                          </div>
+                    </Link>
+                      </div>
                   </div>
                 ))}
             </div>
@@ -127,6 +131,7 @@ function PostDetail() {
             </div>
             <div className="HomePageInnerRight2"></div>
           </div>
+        </div>
         </div>
       </>
     );

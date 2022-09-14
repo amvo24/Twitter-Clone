@@ -1,10 +1,12 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import LogoutButton from '../auth/LogoutButton';
 import CreatePostModal from '../Posts/CreatePostModal';
 import './NavBar.css'
 
 const NavBar = () => {
+  const currentUser = useSelector((state) => state.session.user)
   return (
     <div className='kjdhsbf2390'>
       <div className="IconContainer">
@@ -44,7 +46,7 @@ const NavBar = () => {
         </div>
         <div className='NavText'>
           <NavLink
-            to="/users"
+            to={`/users/${currentUser.id}`}
             exact={true}
             className="NavBarLinks"
             activeClassName="active"

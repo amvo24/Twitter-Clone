@@ -71,3 +71,105 @@
     flex-direction: row-reverse;
     align-items: center;
 }
+
+.menu_0897 {
+    /* border: 1px solid white; */
+    background-color: white;
+    position: absolute;
+    width: 395px;
+    height: 250px;
+    bottom: 140px;
+    left: 200px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px 1px rgb(174, 174, 174);
+    display: flex;
+    flex-direction: column;
+}
+
+.topOfMenu_23907 {
+    /* background-color: aqua; */
+    margin-top: 30px;
+    height: 35%;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid rgb(240, 240, 240);
+}
+
+.picAndInfo_409 {
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.profilePic_23907 {
+    display: flex;
+    align-items: center;
+    /* background-color: blueviolet; */
+    margin-left: 20px;
+}
+
+.ActualProfilePic_23907 {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+.userInfo_23907 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    font-size: large;
+    width: 50%;
+    /* background-color: crimson; */
+}
+
+.userName_23907 {
+    font-weight: bold;
+}
+
+.username_23907 {
+    color: gray;
+}
+
+.SVG_23834 {
+    /* background-color: burlywood; */
+    margin-left: 60px;
+}
+
+.bottomOfMenu_23907 {
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    height: 60%;
+    margin-bottom: 20px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.AddAnotherAccount {
+    /* background-color: chocolate; */
+    height: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.AddAnotherAccount:hover {
+    background-color: rgb(240, 240, 240);
+}
+
+.LogOut_23907 {
+    display: flex;
+    align-items: center;
+    height: 50%;
+}
+
+.LogOut_23907:hover {
+    background-color: rgb(240, 240, 240);
+}
+
+.Text_9032 {
+    margin-left: 20px;
+}
