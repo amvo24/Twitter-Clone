@@ -5,21 +5,82 @@
     flex-direction: column;
 }
 
-.labelBoxEditForm {
+.labelBoxContainer {
 /* background-color: blue; */
-height: 25%;
+height: 20%;
 display: flex;
 align-items: center;
+/* border: 1px solid red; */
 /* justify-content: center; */
 }
 
-.EditFormInput {
-    height: 60%;
-    width: 100%;
+.inputBoxEditForm {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    height: 50%;
+    width: 90%;
+    /* background-color: brown; */
+    border: 1px solid rgb(157, 157, 157);
+    border-radius: 15px;
     margin-left: 20px;
+
+
+}
+
+.inputBoxEditFormBIO {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    height: 80%;
+    width: 90%;
+    /* background-color: brown; */
+    border-radius: 15px;
+    margin-left: 20px;
+    border: 1px solid rgb(157, 157, 157);
+
+}
+
+.InputLabelEditForm {
+    /* background-color: blue; */
+    margin-top: 10px;
+    width: 20%;
+    margin-left: 10px;
+}
+
+
+.EditFormInput {
+    height: 40%;
+    width: 90%;
+    margin-left: 10px;
     margin-right: 20px;
     border-radius: 10px;
+    /* background-color: coral; */
+    border: none;
+    font-size: larger;
+    margin-top: 10px;
+}
+
+.EditFormInput:focus {
+    outline: none;
+}
+
+.EditFormInputBIO {
+    height: 60%;
+    width: 90%;
+    margin-left: 10px;
+    margin-right: 20px;
+    border-radius: 10px;
+    /* background-color: rgb(103, 255, 80); */
     border: 1px solid gray;
     font-size: larger;
+    margin-top: 10px;
+    display: flex;
+    align-items: baseline;
+    border: none;
 
+}
+
+.EditFormInputBIO:focus {
+    outline: none;
 }

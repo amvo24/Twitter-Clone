@@ -3,6 +3,7 @@
     /* border: .5px solid rgb(240, 240, 240); */
     border-top: .5px solid rgb(240, 240, 240);
     border-bottom: .5px solid rgb(240, 240, 240);
+    /* position: relative; */
 }
 
 .TweetContainer:hover {
@@ -13,6 +14,9 @@
     margin: 10px 25px 10px 25px
 } */
 
+/* .DeleteOrShareContainer {
+    position: absolute;
+} */
 .TweetUserContainer {
     margin: 15px 10px 25px 10px;
     text-align: left;
@@ -95,6 +99,7 @@
     margin-bottom: 10px;
     margin-left: 20px;
     margin-right: 20px;
+    /* position: relative; */
 
 
 }
@@ -110,4 +115,19 @@
 
 .TweetDeleteButton {
     cursor: pointer;
+}
+
+.ShareButtonDiv {
+    /* background-color: brown; */
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+}
+
+.ShareButtonDiv:hover {
+    background-color: rgba(87, 183, 91, 0.261);
+    border-radius: 100%;
+
 }

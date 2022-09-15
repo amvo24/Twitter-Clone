@@ -35,13 +35,7 @@ function EditProfileModal({user}) {
                     <div className="EditPMForm">
                     <EditProfileForm user={user}/>
                     </div>
-                    {/* <div>
-                        hi
-                    </div>
-                    <div>hello</div>
-                    <div>hello</div>
-                    <div>hello</div>
-                    <div>hello</div> */}
+                    
                 </div>
                 </div>
             </Modal>

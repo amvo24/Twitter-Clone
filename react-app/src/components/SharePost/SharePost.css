@@ -1,0 +1,82 @@
+.ShareButtonDiv {
+    cursor: pointer;
+    position: relative;
+
+}
+
+.Menu_4378209 {
+    height: 150px;
+    width: 300px;
+    background-color: rgb(252, 249, 249);
+    position: absolute;
+    bottom: 50px;
+    right: 5px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 1px rgb(174, 174, 174);
+    cursor: default;
+
+
+}
+
+.TopOfMenu_4378209 {
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgb(196, 196, 196);
+    height: 40%;
+    font-size: large;
+}
+
+.BottomOfMenu_4378209 {
+    /* background-color: aqua; */
+    height: 60%;
+    display: flex;
+    align-items: center;
+}
+
+.LinkBarSharePost{
+    width: 80%;
+    border: 1px solid rgb(196, 196, 196);
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor:default
+}
+
+/* .LinkBarSharePost:hover {
+    background-color: rgb(196, 196, 196);
+} */
+
+.LinkforShare {
+    /* width: 80%; */
+    /* background-color: brown; */
+}
+
+.CopySVGButton {
+    /* background-color: brown; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.CopySVGButton:hover {
+    background-color: rgba(185, 185, 185, 0.552);
+    cursor: pointer;
+}
+
+.CopiedConfirmed {
+    background-color: brown;
+    height: 100px;
+    width: 100px;
+}
