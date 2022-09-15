@@ -16,20 +16,21 @@ const EditProfileForm = ({user}) => {
 //   const user = useSelector(state => state.session.user);
   const dispatch = useDispatch();
 
+  let id = user.id
+
   const onEditSubmit = async (e) => {
     e.preventDefault();
 
-    let editedUser = {
-        banner_pic,
-        profile_pic,
-        name,
-        bio
-    }
-
-    const data = await dispatch(editAUser(editedUser, user.id));
-    if (data) {
-        setErrors(data)
-    }
+        let editedUser = {
+            banner_pic,
+            profile_pic,
+            name,
+            bio
+        }
+        return dispatch(editAUser(editedUser, id));
+        // if (data) {
+        //     setErrors(data)
+        // }
   };
 
   const updateBanner_pic = (e) => {
