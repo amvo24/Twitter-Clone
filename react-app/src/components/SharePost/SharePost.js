@@ -8,7 +8,7 @@ function SharePost({post}) {
     const [copied, setCopied] = useState(false)
     const originUrl = window.location.origin
     const CopyPostUrl = `${originUrl}/post/${post.id}`
-    console.log(copied, 'BOOLEAN OF CLICKED')
+
 
     const openMenu = () => {
         if (showMenu) return

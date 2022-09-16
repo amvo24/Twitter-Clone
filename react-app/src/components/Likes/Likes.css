@@ -1,0 +1,13 @@
+.HeartBackgroundCircle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+
+.HeartBackgroundCircle:hover {
+    background-color: rgba(250, 126, 126, 0.294);
+}

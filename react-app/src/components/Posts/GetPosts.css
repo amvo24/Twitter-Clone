@@ -10,13 +10,7 @@
     background-color: rgb(240, 240, 240);
 }
 
-/* .TweetContainerTopHalf {
-    margin: 10px 25px 10px 25px
-} */
 
-/* .DeleteOrShareContainer {
-    position: absolute;
-} */
 .TweetUserContainer {
     margin: 15px 10px 25px 10px;
     text-align: left;
@@ -104,13 +98,22 @@
 
 }
 
+.buttonAndAmountcontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
 .TweetLikesDiv {
     display: flex;
     flex-direction: row;
+    /* background-color: aqua; */
 }
 
-.NumberofLikes {
-    margin-left: 10px;
+.Numberof {
+    margin-left: 5px;
+    margin-bottom: 5px;
 }
 
 .TweetDeleteButton {

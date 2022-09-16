@@ -9,11 +9,12 @@ import { deleteAPost } from '../../store/posts'
 
 function GetCommentsForPost({id}) {
     const dispatch = useDispatch()
-    const comments = useSelector((state) => state.comments.comments)
+    const comments = useSelector((state) => state.comments)
     const currentUser = useSelector((state) => state.session.user)
     const post = useSelector((state) => state.posts[id])
     const commentArray = Object.values(comments)
-    // console.log(commentArray, "LOOK HERE")
+    console.log(comments, "look here for comments")
+
 
     useEffect(() => {
         dispatch(getAllCommentByPostId(id))
@@ -28,7 +29,11 @@ function GetCommentsForPost({id}) {
         <>
         <div>
         {commentArray.map((comment) => (
-            <div className="CommentContainer_394">
+            <div>
+            {comment.post.id === id ?
+            <div className="CommentContainer_394" key={comment.id}>
+
+
                 <div className="TopCommentContainer">
                     <div className="ImageCommentContainer">
                         <img className="ProfilePicComments" src={comment.user.profile_pic}/>
@@ -84,6 +89,8 @@ function GetCommentsForPost({id}) {
                         </div>
                 </div>
             </div>
+        : null}
+        </div>
         ))}
 
         </div>

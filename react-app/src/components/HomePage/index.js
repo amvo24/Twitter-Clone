@@ -1,15 +1,19 @@
+import React, {useState, useEffect} from 'react';
 import GetPosts from '../Posts/GetPosts';
 import NavBar from '../NavBar_User_UserList/NavBar'
 import CreatePost from '../Posts/CreatePost';
 import CriticismWidget from '../Widgets/CriticismWidget';
 import SocialsWidget from '../Widgets/SocialsWidget';
 import BottomProfileButton from '../NavBar_User_UserList/BottomProfileButton';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { getAllComment } from '../../store/comments';
 import './HomePage.css'
 
 
 function HomeComponent() {
   const user = useSelector((state) => state.session.user)
+
+
 
   return (
     <>

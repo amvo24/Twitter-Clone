@@ -11,6 +11,7 @@ def seed_users():
         email='demo@aa.io',
         password='password',
         bio='Im am only good for testing',
+        place='Demo, Land',
         birthday=datetime(1996, 5, 10),
         banner_pic='https://www.publichealthpost.org/wp-content/uploads/2020/05/3.png',
         joined=datetime(2012, 5, 8)
@@ -23,6 +24,7 @@ def seed_users():
         email='drewski@aa.io',
         password='password',
         birthday=datetime(1995, 10, 24),
+        place='Houston, Tx',
         bio='Finally getting the hang of twitter',
         banner_pic='https://cdn.wallpapersafari.com/5/3/l4ZCMe.jpg',
         joined=datetime(2018, 8, 28)
@@ -33,6 +35,7 @@ def seed_users():
         username='bobbie',
         email='bobbie@aa.io',
         password='password',
+        place='Los Angeles, CA',
         birthday=datetime(1998, 12, 20),
         bio='The times, theyre a changin',
         joined=datetime(2019, 7, 18),

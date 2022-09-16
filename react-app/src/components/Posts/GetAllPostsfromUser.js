@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { getAllPosts, deleteAPost } from '../../store/posts';
+import { getAllComment } from '../../store/comments';
 import CreateCommentModal from '../Comments/CommentModal';
 
 function GetAllPostsFromUser({user}) {
@@ -9,11 +10,17 @@ function GetAllPostsFromUser({user}) {
     const dispatch = useDispatch()
     const posts = useSelector((state) => state.posts)
     const currentUser = useSelector((state) => state.session.user)
+    const comments = useSelector((state) => state.comments)
+    const commentArray = Object.values(comments).reverse()
     const postsArray = Object.values(posts).reverse()
 
 
     useEffect(() => {
         dispatch(getAllPosts())
+    }, [dispatch])
+
+    useEffect(() => {
+      dispatch(getAllComment())
     }, [dispatch])
 
     const deletePost = (id) => async(e) => {
@@ -61,8 +68,13 @@ function GetAllPostsFromUser({user}) {
                 ) : null}
               </Link>
         <div className="TweetBottomBar">
-          <div className="TweetCommentButton">
-            <CreateCommentModal id={post.id} />
+          <div className='buttonAndAmountcontainer'>
+            <div className="TweetCommentButton">
+              <CreateCommentModal id={post.id} />
+            </div>
+            <div className='Numberof'>
+                  {commentArray.filter((comment) => comment.post.id === post.id).length}
+            </div>
           </div>
           <div className="TweetRetweetsButton">RETWEETS</div>
           <div className="TweetLikesButton">LIKES</div>

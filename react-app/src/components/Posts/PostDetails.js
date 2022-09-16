@@ -18,6 +18,8 @@ function PostDetail() {
     id = Number(id)
     const post = useSelector((state) => state.posts[id])
     const currentUser = useSelector((state) => state.session.user)
+    const comments = useSelector((state) => state.comments)
+    const commentArray = Object.values(comments)
     const [user, setUsers] = useState([])
 
     useEffect(() => {
@@ -90,8 +92,13 @@ function PostDetail() {
               <img className="TweetImgTag" src={post?.images} />
             </div>
             <div className="TweetBottomBar">
+            <div className='buttonAndAmountcontainer'>
               <div className="TweetCommentButton">
                 <CreateCommentModal />
+              </div>
+                <div className='Numberof'>
+                  {commentArray.filter((filtered) => filtered.post.id === id).length}
+                </div>
               </div>
               <div className="TweetRetweetsButton">RETWEETS</div>
               <div className="TweetLikesButton">LIKES</div>

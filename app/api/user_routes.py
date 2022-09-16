@@ -33,6 +33,7 @@ def editUser2(id):
         user.name=form.data['name']
         user.profile_pic=form.data['profile_pic']
         user.banner_pic=form.data['banner_pic']
+        user.place=form.data['place']
 
         db.session.commit()
         return user.to_dict()

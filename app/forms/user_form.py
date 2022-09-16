@@ -10,3 +10,4 @@ class UserForm(FlaskForm):
     username = StringField('username')
     email = StringField('email')
     password = StringField('password')
+    place = StringField('place')

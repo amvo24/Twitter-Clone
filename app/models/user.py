@@ -17,6 +17,7 @@ class User(db.Model, UserMixin):
     bio = db.Column(db.String(140), nullable=True)
     birthday = db.Column(db.DateTime, nullable=False)
     joined = db.Column(db.DateTime, nullable=False)
+    place = db.Column(db.String, nullable=False)
 
 
     post = db.relationship("Post", back_populates="userObject", cascade='all, delete')
@@ -46,4 +47,5 @@ class User(db.Model, UserMixin):
             'bio': self.bio,
             'birthday': str(self.birthday),
             'joined': self.joined,
+            'place': self.place,
         }

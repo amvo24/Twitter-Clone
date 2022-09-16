@@ -58,7 +58,7 @@ export const getAllCommentByPostId = (id) => async (dispatch) => {
             return;
         }
 
-        dispatch(loadCommentByPost(payload));
+        dispatch(loadComment(payload));
     }
 }
 
@@ -109,19 +109,19 @@ export const deleteAComment = (id) => async (dispatch) => {
     }
 };
 
-const initialState = {comments: []};
+const initialState = {};
 
 export default function commentReducer(state = initialState, action) {
     let newState = {}
 
     switch (action.type) {
     case LOAD_COMMENTS:
-        action.payload.forEach(el => newState[el.id] = el);
+        action.payload.comments.forEach(el => newState[el.id] = el);
         return newState
-    case LOAD_COMMENTS_BY_POST:
-        newState = {...state, comments:[...action.payload.comments]}
-        // action.payload.forEach(el => newState[el.id] = el);
-        return newState
+    // case LOAD_COMMENTS_BY_POST:
+    //     newState = {...state, ...action.payload.comments}
+    //     // action.payload.forEach(el => newState[el.id] = el);
+    //     return newState
     case CREATE_COMMENT:
         newState = {...state}
         newState[action.payload.id] = action.payload
