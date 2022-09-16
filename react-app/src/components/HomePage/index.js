@@ -35,11 +35,13 @@ function HomeComponent() {
     </div>
     <div className='HomePageColumns middle'>
         <div className='HomePageCenterColumn'>
-            <h2 className='HomePageCenterColumnTitle'>
-              Home
-            </h2>
+          <div className='TopOfHomePageCenterColumn'>
+            <div className='HomePageCenterColumnTitle'>Home</div>
             <CreatePost />
+          </div>
+          <div className='HomePageCenterColumnFeed'>
             <GetPosts />
+          </div>
         </div>
     </div>
     <div className='HomePageColumns right'>

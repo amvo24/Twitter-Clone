@@ -39,53 +39,51 @@ const CreatePost = () => {
 
   return (
     <div className='CreatePostContainer_235'>
-    <div className='UserInfo'>
-      <Link to={`/users/${user.id}`}>
-        <div className='ProfilePicContainer'>
-            <img className='ProfilePic' src={user.profile_pic}/>
+      <div className='UserInfo'>
+        <Link to={`/users/${user.id}`}>
+          <div className='ProfilePicContainer'>
+              <img className='ProfilePic' src={user.profile_pic}/>
+          </div>
+        </Link>
+        <div className='CPUsernamecontainer'>
+        <Link className='CPUsernameLink' to={`/users/${user.id}`}>
+            <div className='CreatePostUsersName'>
+              {user.name}
+            </div>
+            <div className='CreatePostUsername'>
+              {'@' + user.username}
+            </div>
+        </Link>
         </div>
-      </Link>
-      <div className='CPUsernamecontainer'>
-      <Link className='CPUsernameLink' to={`/users/${user.id}`}>
-          <div className='CreatePostUsersName'>
-            {user.name}
-          </div>
-          <div className='CreatePostUsername'>
-            {'@' + user.username}
-          </div>
-      </Link>
       </div>
-    </div>
-    <form onSubmit={handleSubmit} className="CreatePostForm">
-      <div>
-        {errors.map((error, ind) => (
-          <div key={ind}>{error}</div>
-        ))}
-      </div>
-      <div className='CreatePostBodyContainer'>
-        <input
-          className='CreatePostBody'
-          type='text'
-          name='body'
-          placeholder="What's Happening?"
-          onChange={updateBody}
-          value={body}
-        ></input>
-      </div>
-      <div>
-        <input
-          className='CreatePostImage'
-          type='text'
-          name='image'
-          placeholder='Image'
-          onChange={updateImages}
-          value={images}
-        ></input>
-      </div>
-      <div className='CreatePostButton'>
-      <button type='submit'>Post</button>
-      </div>
-    </form>
+      <form onSubmit={handleSubmit} className="CreatePostForm">
+        <div>
+          {errors.map((error, ind) => (
+            <div key={ind}>{error}</div>
+          ))}
+        </div>
+        {/* <div className='CreatePostBodyContainer'> */}
+          <textarea
+            className='CreatePostBody'
+            type='text'
+            name='body'
+            placeholder="What's Happening?"
+            onChange={updateBody}
+            value={body}
+          ></textarea>
+        {/* </div> */}
+        <div className='PostImgContainer'>
+          <input
+            className='CreatePostImage'
+            type='text'
+            name='image'
+            placeholder='Add an image'
+            onChange={updateImages}
+            value={images}
+          ></input>
+        </div>
+        <button className='ActualPostButton' type='submit'>Post</button>
+      </form>
     </div>
   );
 };

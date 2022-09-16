@@ -10,4 +10,81 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    height: 100%;
+    /* background-color: aquamarine; */
+}
+
+.CriticismTitleContainer {
+    font-size: x-large;
+    font-weight: bold;
+    /* background-color: blue; */
+    height: 20%;
+    width: 100%;
+    display: flex;
+    align-items: center
+}
+
+.CriticismTitle {
+    margin-left: 15px;
+}
+
+.CriticismFormContainer {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-end; */
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    /* background-color: brown; */
+}
+
+.CriticismForm {
+    /* background-color: blueviolet; */
+    height: 80%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.CriticismFormTextArea {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 30%;
+    border-radius: 10px;
+    text-align: justify;
+}
+
+.CriticismFormTextArea::placeholder {
+    font-size: medium;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.CriticismFormTextAreaButton {
+    width: 15%;
+    height: 30px;
+    margin-top: 5px;
+    margin-left: 377px;
+    border-radius: 20px;
+    color: white;
+    background-color: rgb(29, 155, 240);
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.CriticismComments {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 45%;
+    margin-top: 10px;
+    border: 1px solid;
+    border-radius: 10px;
+    /* background-color: blue; */
 }
