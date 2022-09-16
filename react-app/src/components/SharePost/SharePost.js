@@ -53,7 +53,7 @@ function SharePost({post}) {
           {showMenu && (
             <div className="Menu_4378209">
               <div className="TopOfMenu_4378209">
-                Share this link with you friends!
+                Share this link with your friends!
               </div>
               <div className="BottomOfMenu_4378209">
                 <div className="LinkBarSharePost">

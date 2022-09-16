@@ -3,12 +3,123 @@
     background-color: rgb(240, 240, 240);
     margin-top: 30px;
     border-radius: 25px;
-    width: 110%;
-    height: 120%;
+    width: 80%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+
+
+}
+
+.MySocialsTitle {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    font-size: x-large;
+    font-weight: bold;
+    height: 20%;
+    width: 100%;
+    margin-left: 15px;
+    /* border-bottom: 1px solid rgb(179, 179, 179); */
+
 }
 
 .SocialsContent {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    /* background-color: rgb(255, 0, 119); */
+    height: 75%;
+    width: 90%;
+    font-size: x-large;
+}
+
+.SocialsDiv{
+    /* background-color: blueviolet; */
+    height: 98%;
+    width: 100%;
+    margin-top: 10px;
+}
+
+
+.LinkforSocial {
+    display: flex;
+    flex-direction: row;
+}
+
+.linkedin {
+    display: flex;
+    flex-direction: row;
+    /* background-color: brown; */
+    margin-left: 15px;
+    border-radius: 30px;
+    height: 60px;
+    width: 190px;
+}
+
+.linkedin:hover {
+    background-color: rgba(158, 158, 158, 0.394);
+}
+
+.Github {
+    display: flex;
+    flex-direction: row;
+    /* background-color: brown; */
+    margin-left: 15px;
+    border-radius: 30px;
+    height: 60px;
+    width: 170px;
+
+}
+
+.Github:hover {
+    background-color: rgba(158, 158, 158, 0.394);
+}
+
+.Airbnb {
+    display: flex;
+    flex-direction: row;
+    /* background-color: brown; */
+    margin-left: 15px;
+    border-radius: 30px;
+    height: 60px;
+    width: 300px;
+
+}
+
+.Airbnb:hover {
+    background-color: rgba(158, 158, 158, 0.394);
+}
+
+.LinkforSocial:link {
+    text-decoration: none;
+    color: black;
+}
+
+.LinkforSocial:visited {
+    color: black;
+}
+
+.logoContainer{
+    display: flex;
     align-items: center;
+
+}
+
+.ImageLogoSocials {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    /* background-color: crimson; */
+}
+
+.SocialsText {
+    /* background-color: chartreuse; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
 }
