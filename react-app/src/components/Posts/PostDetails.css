@@ -4,9 +4,21 @@
     /* background-color: blue; */
 }
 
-.HomePageCenterColumnTitle {
-    /* background-color: aqua; */
+.PostDetailsColumnTitle {
+    /* background-color: blueviolet; */
+    display: flex;
+    align-items: center;
+    height: 70px;
+
 }
+
+.PostDetailsColumnTitleWord {
+    font-size: x-large;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+
 
 .ActualPostUserInfo {
     /* background-color: beige; */

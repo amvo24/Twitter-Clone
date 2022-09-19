@@ -24,6 +24,13 @@ class User(db.Model, UserMixin):
     comments = db.relationship("Comment", back_populates="user", cascade='all, delete')
     replies = db.relationship("Replies", back_populates="user", cascade='all, delete')
 
+    user_likes = db.relationship(
+        "Post",
+        secondary="likes",
+        back_populates="post_likes",
+        cascade='all, delete'
+    )
+
     @property
     def password(self):
         return self.hashed_password
@@ -48,4 +55,10 @@ class User(db.Model, UserMixin):
             'birthday': str(self.birthday),
             'joined': self.joined,
             'place': self.place,
+        }
+        
+    def to_dict_get_likes(self):
+        # print('.....', self.user_likes)
+        return {
+            'likes': [post.to_dict() for post in self.user_likes]
         }

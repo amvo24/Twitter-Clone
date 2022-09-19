@@ -63,7 +63,9 @@ function PostDetail() {
         </div>
         <div className="HomePageColumns middle">
           <div className="PostDetailsCenterColumn">
-            <h2 className="HomePageCenterColumnTitle">Tweet</h2>
+            <div className="PostDetailsColumnTitle">
+              <div className='PostDetailsColumnTitleWord'>Tweet</div>
+            </div>
             <div className="ActualPostUserInfo">
               {user
                 .filter((user) => user.id === post?.user_id)

@@ -50,9 +50,11 @@ function User() {
     </div>
     <div className='HomePageColumns middle'>
         <div className='ProfilePageCenterColumn'>
-            <h2 className='HomePageCenterColumnTitle'>
-            {user.name}
-            </h2>
+            <div className='ProfilePageCenterColumnTitle'>
+              <div className='ProfilePageCenterColumnTitleWord'>
+                {user.name}
+              </div>
+            </div>
             <ProfileTopComponent user={user}/>
             <GetAllPostsFromUser user={user}/>
             {/* <CreatePost /> */}

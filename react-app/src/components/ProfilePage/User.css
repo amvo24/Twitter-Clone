@@ -1,3 +1,17 @@
 .BottomProfileButtonComponent {
     margin-top: 200px;
 }
+
+
+.ProfilePageCenterColumnTitle {
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.ProfilePageCenterColumnTitleWord {
+    font-weight: bold;
+    font-size: x-large;
+    margin-left: 20px;
+    /* background-color: brown; */
+}

@@ -38,3 +38,10 @@ def editUser2(id):
         db.session.commit()
         return user.to_dict()
     # return {'errors': validation_errors_to_error_messages(form.errors)}, 401
+
+@user_routes.route('/<int:id>/likes')
+@login_required
+def user_likes(id):
+    likes_users = User.query.get(id).to_dict_get_likes()
+
+    return likes_users
