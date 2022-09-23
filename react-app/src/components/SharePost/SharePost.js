@@ -7,7 +7,7 @@ function SharePost({post}) {
     const [showMenu, setShowMenu] = useState(false)
     const [copied, setCopied] = useState(false)
     const originUrl = window.location.origin
-    const CopyPostUrl = `${originUrl}/post/${post.id}`
+    const CopyPostUrl = `${originUrl}/post/${post?.id}`
 
 
     const openMenu = () => {

@@ -19,7 +19,10 @@ function CreateCommentModal({id}) {
           <div className="TopOfModal">
                 <div className="UserInfo_328974">
                         <div className="UserProfilePic_23407">
-                          <img className="ProfilePic" src={post.user.profile_pic}/>
+                          <div  className="UserProfilePic_234079">
+                            <img className="ProfilePic" src={post.user.profile_pic}/>
+
+                          </div>
                         </div>
                         <div className="Usernameandname_1234">
                             <div className="Name_2390">{post.user.name}</div>

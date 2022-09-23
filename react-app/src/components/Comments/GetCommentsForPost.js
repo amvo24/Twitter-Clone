@@ -13,7 +13,7 @@ function GetCommentsForPost({id}) {
     const currentUser = useSelector((state) => state.session.user)
     const post = useSelector((state) => state.posts[id])
     const commentArray = Object.values(comments)
-    console.log(comments, "look here for comments")
+    
 
 
     useEffect(() => {

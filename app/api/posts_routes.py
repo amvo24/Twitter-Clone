@@ -1,7 +1,7 @@
 from urllib import response
 from flask import Blueprint, jsonify, request
 from app.api.auth_routes import validation_errors_to_error_messages
-from app.models import db, Post, User
+from app.models import db, Post, User, Comment
 from app.forms import PostForm
 from flask_login import login_required, current_user
 
@@ -65,35 +65,3 @@ def delete_post_by_id(id):
     return {'posts': response}
 
 
-@posts_routes.route('/<int:postId>/like', methods=["PUT"])
-@login_required
-def like(postId):
-    user = User.query.get(current_user.id)
-    post = Post.query.get(postId)
-
-    isUserLikes = False
-    for likedUser in post.posts_likes:
-        if (likedUser.id == current_user.id):
-            isUserLikes = True
-
-    if (not isUserLikes):
-        post.posts_likes.append(user)
-        db.session.commit()
-
-    return {'likes':post.to_dict()}
-
-
-@posts_routes.route('/<int:postId>/like',methods=["DELETE"])
-@login_required
-def unlike(postId):
-    user = User.query.get(current_user.id)
-    post = Post.query.get(postId)
-    isUserLikes = False
-    for likedUser in post.posts_likes:
-        if(likedUser.id == current_user.id ):
-             isUserLikes = True
-
-    if(isUserLikes):
-        post.posts_likes.remove(user)
-        db.session.commit()
-    return {"likes":post.to_dict()}

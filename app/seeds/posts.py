@@ -53,23 +53,20 @@ def seed_posts():
         # likes=3,
         reposts=2,
         images='https://www.theedadvocate.org/wp-content/uploads/2016/02/board-361516_960_720.jpg',
-        user_id=1,
-        post_likes=[sephiroth, tifa]
+        user_id=1
         )
     marniePost = Post(
         body='Hello World, I am Cloud',
         # likes=5,
         reposts=4,
-        user_id=2,
-        post_likes=[aerith, tifa]
+        user_id=2
         )
     bobbiePost = Post(
         body='My name bobbie bushay',
         # likes=6,
         reposts=5,
         images='https://www.musictoyourhome.com/wp-content/uploads/2021/04/8-Easy-Guitar-Songs-For-Every-Beginner.jpg',
-        user_id=3,
-        post_likes=[aerith, sephiroth]
+        user_id=3
         )
 
     db.session.add(demoPost)

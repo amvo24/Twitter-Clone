@@ -45,15 +45,16 @@ function GetPosts() {
     <>
       <div>
         {postsArray.map((post) => (
-          <div className="TweetContainer" key={post.id}>
-            <Link to={`./post/${post.id}`} className="TweetLink">
+
+          <div className="TweetContainer" key={post?.id}>
+            <Link to={`./post/${post?.id}`} className="TweetLink">
               <div className="TweetUserContainer">
                 <div className="TweetContainerTopHalf">
                   {users
-                    .filter((user) => user.id === post.user_id)
+                    .filter((user) => user.id === post?.user_id)
                     .map((trueUser) => (
                       <div className="TweetUserContainer123" key={trueUser.id}>
-                        <Link to={`users/${post.user_id}`}>
+                        <Link to={`users/${post?.user_id}`}>
                           <div className="ImageContainer34">
                             <img
                               className="ProfilePic"
@@ -64,7 +65,7 @@ function GetPosts() {
                         <div className="TweetUserInfoContainer">
                           <Link
                             className="TweetUserInfoContainerLink"
-                            to={`users/${post.user_id}`}
+                            to={`users/${post?.user_id}`}
                           >
                             <div className="TweetName">
                               {trueUser.name}
@@ -77,31 +78,31 @@ function GetPosts() {
                         </div>
                       </div>
                     ))}
-                  <div className="TweetBody">{post.body}</div>
+                  <div className="TweetBody">{post?.body}</div>
                 </div>
               </div>
-              {post.images ? (
-                <img className="TweetImgTag" src={post.images} />
+              {post?.images ? (
+                <img className="TweetImgTag" src={post?.images} />
               ) : null}
             </Link>
             <div className="TweetBottomBar">
               <div className='buttonAndAmountcontainer'>
                 <div className="TweetCommentButton">
-                  <CreateCommentModal id={post.id} />
+                  <CreateCommentModal id={post?.id} />
                 </div>
                   <div className='Numberof'>
-                  {commentArray.filter((comment) => comment.post.id === post.id).length}
+                  {commentArray.filter((comment) => comment.post?.id === post?.id).length}
                   </div>
               </div>
               <div className="TweetRetweetsButton">RETWEETS</div>
-              
+              {/* LIKES */}
               <Likes post={post} />
               <div className='DeleteOrShareContainer'>
-                {(currentUser && currentUser.id === post.user_id && (
+                {(currentUser && currentUser.id === post?.user_id && (
                   <div className="TweetDeleteButtonDiv">
                     <svg
                       className="TweetDeleteButton"
-                      onClick={deletePost(post.id)}
+                      onClick={deletePost(post?.id)}
                       xmlnsXlink="http://www.w3.org/1999/xlink"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
