@@ -7,10 +7,12 @@ def seed_comment():
         body='Greetings Marnie, I am demo',
         likes=3, reposts=2,
         user_id=1, post_id=2)
+
     marnieComment = Comment(
         body='Hey Bobbie, any plans today?',
         likes=5, reposts=4, images='insertImgHere',
         user_id=2, post_id=3)
+        
     bobbieComment = Comment(
         body='Demo is a funny name',
         likes=6, reposts=5,
