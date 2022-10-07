@@ -27,7 +27,7 @@ function HomeComponent() {
             <img className='BIRDIMG' src='https://icon-library.com/images/twitter-bird-icon-png/twitter-bird-icon-png-23.jpg'/>
             </div>
             <NavBar />
-            <div className='BottomProfileButtonComponent'>
+            <div className='BottomProfileButtonComponent1'>
             <BottomProfileButton user={user}/>
             </div>
           </div>
@@ -47,7 +47,7 @@ function HomeComponent() {
     <div className='HomePageColumns right'>
         <div className='HomePageRightColumn'>
           <div className='HomePageInnerRight'>
-            <h2>WIDGETS</h2>
+            {/* <h2>WIDGETS</h2> */}
             <CriticismWidget />
             <SocialsWidget />
           </div>

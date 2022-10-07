@@ -21,7 +21,8 @@
 .WordContainer {
     display: flex;
     justify-content: center;
-    /* margin-top: 3px; */
+    align-items: center;
+    margin-top: 4px;
 }
 
 .LogoutWord {
