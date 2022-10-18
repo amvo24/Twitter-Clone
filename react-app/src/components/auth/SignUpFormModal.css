@@ -1,0 +1,28 @@
+.outerSUFcontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.SUFtitle {
+    /* background-color: aquamarine; */
+    height: 10%;
+    width: 80%;
+    font-size: x-large;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column-reverse;
+    /* align-items: center; */
+}
+
+.CPM_div {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: blue; */
+}
