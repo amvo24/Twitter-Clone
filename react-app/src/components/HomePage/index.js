@@ -13,7 +13,7 @@ import './HomePage.css'
 function HomeComponent() {
   const user = useSelector((state) => state.session.user)
 
-
+// this is on main branch
 
   return (
     <>

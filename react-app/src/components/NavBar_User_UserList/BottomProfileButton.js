@@ -55,14 +55,12 @@ function BottomProfileButton({user}) {
                     </div>
                 </div>
                 <div className="bottomOfMenu_23907">
-                    <div className="AddAnotherAccount">
+                    {/* <div className="AddAnotherAccount">
                         <div className="Text_9032">
                             Add Another Account
-                            <div>
-                                {/* <LoginModal /> */}
-                            </div>
+                            
                         </div>
-                    </div>
+                    </div> */}
                     <div className="LogOut_23907">
                         <LogoutButton />
                     </div>

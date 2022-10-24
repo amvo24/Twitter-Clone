@@ -43,10 +43,10 @@ function ProfileTopComponent({user}) {
             </div>
 
             <div className="ProfilePageBottomNavBar">
-                <div className="ProfilePageBottomNavBarTweets">Tweets</div>
+                {/* <div className="ProfilePageBottomNavBarTweets">Tweets</div>
                 <div className="ProfilePageBottomNavBarTweetsAndReplies">TweetsAndReplies</div>
                 <div className="ProfilePageBottomNavBarMedia">Media</div>
-                <div className="ProfilePageBottomNavBarLikes">Likes</div>
+                <div className="ProfilePageBottomNavBarLikes">Likes</div> */}
             </div>
         </div>
         </>
