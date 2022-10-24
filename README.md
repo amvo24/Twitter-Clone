@@ -6,7 +6,8 @@ The purpose of this project is to demonstrate full mastery of web development sk
 
 # Technologies Used
 Backend: SQLAlchemy, Flask, Alembic
-Frontend: React, Redeux
+
+Frontend: React, Redux
 
 # Flask React Project
 
