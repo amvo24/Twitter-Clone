@@ -1,3 +1,6 @@
+# Twitter-Clone
+Twitter is a full stack project that utilizes Flask, SQLAlchemy, and React with Redux to deliver a polished, fully functioning clone of Twitter!
+
 # Flask React Project
 
 This is the starter for the Flask React project.
