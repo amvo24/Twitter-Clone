@@ -56,7 +56,7 @@ function SplashPage() {
                     </div>
                 </div>
             </div>
-            <div className="SplashPageFooter">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consectetur adipiscing elit Phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis. </div>
+            {/* <div className="SplashPageFooter">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consectetur adipiscing elit Phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis. </div> */}
         </div>
         </>
     )

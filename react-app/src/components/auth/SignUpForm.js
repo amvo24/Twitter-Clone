@@ -64,77 +64,74 @@ const SignUpForm = () => {
   }
 
   return (
-    <form className='SignUpForm' onSubmit={onSignUp}>
+    <form className='SignUpForm1' onSubmit={onSignUp}>
       <div>
         {errors.map((error, ind) => (
           <div key={ind}>{error}</div>
         ))}
       </div>
-      <div>
-        <label>Username</label>
-        <input
-          type='text'
-          name='username'
-          onChange={updateUsername}
-          value={username}
-        ></input>
+      <div className='outerDivSUF'>
+          <input
+            type='text'
+            name='username'
+            required
+            autoComplete='off'
+            onChange={updateUsername}
+            value={username}
+          ></input>
+          <label for='username' class='label-name'>
+            <div class="content-name">Username</div>
+          </label>
       </div>
-      <div>
-        <label>Name</label>
+      <div className='outerDivSUF'>
         <input
           type='text'
           name='name'
+          required
           onChange={updateName}
           value={name}
         ></input>
+        <label for='username' class='label-name'>
+            <div class="content-name">Name</div>
+        </label>
       </div>
-      {/* <div>
-        <label>Profile Pic</label>
-        <input
-          type='text'
-          name='profilePic'
-          onChange={updateProfilePic}
-          value={profilePic}
-        ></input>
-      </div> */}
-      {/* <div>
-        <label>Banner Pic</label>
-        <input
-          type='text'
-          name='bannerPic'
-          onChange={updateBannerPic}
-          value={bannerPic}
-        ></input>
-      </div> */}
-      <div>
-        <label>Email</label>
+      <div className='outerDivSUF'>
         <input
           type='text'
           name='email'
+          required
           onChange={updateEmail}
           value={email}
         ></input>
+        <label for='username' class='label-name'>
+            <div class="content-name">Email</div>
+        </label>
       </div>
-      <div>
-        <label>Date of Birth</label>
+      <div className='outerDivSUF'>
         <input
           type=''
           name='birthday'
+          required
           onChange={updateBirthday}
           value={email}
         ></input>
+        <label for='username' class='label-name'>
+            <div class="content-name">Birthday</div>
+        </label>
       </div>
-      <div>
-        <label>Password</label>
+      <div className='outerDivSUF'>
         <input
           type='password'
           name='password'
+          required
           onChange={updatePassword}
           value={password}
-        ></input>
+          ></input>
+         <label for='username' class='label-name'>
+            <div class="content-name">Password</div>
+        </label>
       </div>
-      <div>
-        <label>Repeat Password</label>
+      <div className='outerDivSUF'>
         <input
           type='password'
           name='repeat_password'
@@ -142,8 +139,11 @@ const SignUpForm = () => {
           value={repeatPassword}
           required={true}
         ></input>
+        <label for='username' class='label-name'>
+            <div class="content-name">Repeat Password</div>
+        </label>
       </div>
-      <button type='submit'>Sign Up</button>
+      <button className='SUFbutton' type='submit'>Sign Up</button>
     </form>
   );
 };

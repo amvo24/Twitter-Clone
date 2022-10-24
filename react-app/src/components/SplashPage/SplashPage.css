@@ -1,6 +1,8 @@
 .MainSplashPageContainer {
     display: flex;
     flex-direction: column;
+    /* background-color: brown; */
+    /* height: 50%; */
 }
 
 .TopPartSplash {
@@ -29,7 +31,7 @@
 .birdie {
     /* background-color: red; */
     margin-top: 200px;
-    margin-left: 100px;
+    /* margin-left: 100px; */
     position: absolute;
 
 }

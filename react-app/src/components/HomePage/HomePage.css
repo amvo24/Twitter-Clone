@@ -15,6 +15,7 @@
 
 .HomePageColumns {
     float: left;
+    height: 100%;
 
 }
 
@@ -32,6 +33,8 @@
 
 .left {
     width: 25%;
+    height: 100%;
+    /* background-color: aquamarine; */
 
 }
 
@@ -43,9 +46,10 @@
 
 .middle {
     width: 37%;
+    height: 100%;
     border-left: .5px solid rgb(240, 240, 240);
     border-right: .5px solid rgb(240, 240, 240);
-
+    /* background-color: darkmagenta; */
     display: flex;
     flex-direction: column;
     overflow: hidden scroll;
@@ -60,8 +64,12 @@
 .HomePageLeft {
     display: flex;
     justify-content: flex-end;
+    /* height: 100%; */
+    /* background-color: blue; */
+}
 
-
+.BottomProfileButtonComponent1 {
+    
 }
 
 .Column2 {
@@ -71,9 +79,17 @@
     margin-right: 60px;
 }
 
+.HomePageCenterColumn {
+    text-align: center;
+    height: 100%;
+    /* background-color: aqua; */
+    /* position: relative; */
+
+}
+
 .TopOfHomePageCenterColumn {
     /* background-color: chocolate; */
-    height: 10%;
+    height: 30%;
 }
 
 
@@ -88,10 +104,10 @@
     font-size: x-large;
 }
 
-.HomePageCenterColumn {
-    text-align: center;
-    /* position: relative; */
 
+.HomePageCenterColumnFeed {
+    height: 80%;
+    /* background-color: blueviolet; */
 }
 
 .HomePageRightColumn {
@@ -109,7 +125,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    height: 80%;
+    height: 90%;
     width: 100%;
     /* background-color: rgb(0, 16, 240); */
 }

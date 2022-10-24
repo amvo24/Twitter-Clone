@@ -1,9 +1,10 @@
 .CriticismContainer {
     border: .5px solid rgb(240, 240, 240);
     background-color: rgb(240, 240, 240);
-    height: 50%;
+    height: 100%;
     border-radius: 25px;
     width: 80%;
+    margin-top: 10px;
 }
 
 .CriticismContent {
@@ -27,6 +28,7 @@
 
 .CriticismTitle {
     margin-left: 15px;
+    margin-top: 15px;
 }
 
 .CriticismFormContainer {
@@ -36,6 +38,7 @@
     align-items: center;
     height: 100%;
     width: 100%;
+    margin-top: 15px;
     /* background-color: brown; */
 }
 
@@ -68,13 +71,16 @@
     width: 15%;
     height: 30px;
     margin-top: 5px;
-    margin-left: 377px;
+    margin-left: 75%;
     border-radius: 20px;
     color: white;
     background-color: rgb(29, 155, 240);
     border: none;
     cursor: pointer;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .CriticismComments {

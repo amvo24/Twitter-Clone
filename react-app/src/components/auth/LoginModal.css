@@ -1,0 +1,31 @@
+.LoginModalContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    /* background-color: brown; */
+}
+
+.LMSVG {
+    height: 10%;
+    padding: 1%;
+}
+
+.LoginModalTitle {
+    font-weight: bold;
+    font-size: x-large;
+    height: 10%;
+    padding: 1%;
+
+    /* height: 10%; */
+}
+
+.LoginModalFormContainer {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    width: 70%;
+    /* background-color: blue; */
+}

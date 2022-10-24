@@ -11,19 +11,20 @@
     /* margin-bottom: 20px; */
     display: flex;
     flex-direction: row;
-    height: 27%;
+    height: 30%;
     /* background-color: rgb(30, 255, 0); */
 
 }
 
 .CreatePostForm {
     /* border-bottom: .5px solid rgb(240, 240, 240); */
+    /* margin-top: 15px; */
     /* background-color: aqua; */
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
     align-items: center;
-    height: 73%;
+    height: 70%;
 
 }
 
@@ -117,7 +118,7 @@
     /* margin-top: 20px; */
     margin-left: 78px;
     position: absolute;
-    top: 25px;
+    margin-top: 16px;
     width: 60%;
     height: 30px;
     border: 1px solid rgb(202, 202, 202);
@@ -134,9 +135,9 @@
 
 
 .ActualPostButton {
-    margin-top: 20px;
-    margin-left: 620px;
-    height: 45px;
+    margin-top: 15px;
+    margin-left: 80%;
+    height: 40px;
     width: 90px;
     border-radius: 30px;
     color: white;
