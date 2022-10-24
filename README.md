@@ -5,6 +5,8 @@ Twitter is a full stack project that utilizes Flask, SQLAlchemy, and React with 
 The purpose of this project is to demonstrate full mastery of web development skills in conjunction with backend frameworks and frontend application state management architectures.
 
 # Technologies Used
+Backend: SQLAlchemy, Flask, Alembic
+Frontend: React, Redeux
 
 # Flask React Project
 
