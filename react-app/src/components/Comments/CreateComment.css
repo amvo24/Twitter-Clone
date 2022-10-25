@@ -1,4 +1,66 @@
+.CCmaindiv_2398 {
+    /* background-color: aqua; */
+    width: 100%;
+    height: 150%;
+}
+
+.createCommentForm {
+height: 100%;
+width: 100%;
+}
+
+.createCommentBodyContainer {
+    height: 60%;
+    /* background-color: blueviolet; */
+    border-bottom: 1px gray;
+}
+
+.CreateCommentInput {
+    border: none;
+    height: 70%;
+    width: 100%;
+    font-size: x-large;
+}
+
+.CreateCommentInput::placeholder {
+    font-size: x-large;
+    padding-top: 20px;
+    /* margin-top: 50px; */
+}
+
+
+.CCimgInputandButton {
+    display: flex;
+    flex-direction: row;
+    height: 30%;
+}
+
+.createCommentImgContainer {
+    width: 70%;
+}
+
+.CreateCommentImageInput {
+    width: 80%;
+    margin-top: 1%;
+    height: 50%;
+    border-radius: 10px;
+    /* border: lightgrey; */
+}
+
+
 .CreateCommentButton {
-    margin-top: 40px;
-    margin-left: 90%;
+    /* margin-top: 40px; */
+    /* margin-left: 90%; */
+    height: 40px;
+    width: 30%;
+    border-radius: 25px;
+    background-color: rgb(29, 155, 240);
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.CreateCommentButton:hover {
+    background-color: rgb(3, 137, 226);
 }

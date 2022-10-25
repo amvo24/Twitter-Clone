@@ -37,15 +37,7 @@ const CreateComment = ({id}) => {
 
 
   return (
-    <div>
-    {/* <div className='UserInfo'>
-      <div>
-        {user.name}
-      </div>
-      <div>
-        {'@' + user.username}
-      </div>
-    </div> */}
+    <div className='CCmaindiv_2398'>
     <form onSubmit={handleSubmit} className="createCommentForm">
       <div>
         {errors.map((error, ind) => (
@@ -53,28 +45,28 @@ const CreateComment = ({id}) => {
         ))}
       </div>
       <div className='createCommentBodyContainer'>
-        <input
+        <textarea
           className='CreateCommentInput'
           type='text'
           name='body'
           placeholder="Post your reply"
           onChange={updateBody}
           value={body}
-        ></input>
+        ></textarea>
       </div>
-      <div className='createCommentImgContainer'>
-        <input
-          className='CreateCommentImageInput'
-          type='text'
-          name='image'
-          placeholder='Image'
-          onChange={updateImage}
-          value={image}
-        ></input>
+      <div className='CCimgInputandButton'>
+        <div className='createCommentImgContainer'>
+          <input
+            className='CreateCommentImageInput'
+            type='text'
+            name='image'
+            placeholder='Image'
+            onChange={updateImage}
+            value={image}
+          ></input>
+        </div>
+        <button className='CreateCommentButton'  type='submit'>Post</button>
       </div>
-      {/* <div className='CreateCommentButton'> */}
-      <button className='CreateCommentButton'  type='submit'>Update</button>
-      {/* </div> */}
     </form>
     </div>
   );
