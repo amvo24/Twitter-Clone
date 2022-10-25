@@ -48,7 +48,7 @@ function HomeComponent() {
         <div className='HomePageRightColumn'>
           <div className='HomePageInnerRight'>
             {/* <h2>WIDGETS</h2> */}
-            <CriticismWidget />
+            {/* <CriticismWidget /> */}
             <SocialsWidget />
           </div>
           <div className='HomePageInnerRight2'></div>

@@ -64,8 +64,8 @@ function User() {
     <div className='HomePageColumns right'>
         <div className='HomePageRightColumn'>
           <div className='HomePageInnerRight'>
-            <h2>WIDGETS HERE</h2>
-            <CriticismWidget />
+            {/* <h2>WIDGETS HERE</h2> */}
+            {/* <CriticismWidget /> */}
             <SocialsWidget />
           </div>
           <div className='HomePageInnerRight2'></div>

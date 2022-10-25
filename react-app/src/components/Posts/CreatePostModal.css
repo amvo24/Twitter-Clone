@@ -34,4 +34,5 @@
 .CPM_div {
     display: flex;
     flex-direction: row;
+    width: 100%;
 }
