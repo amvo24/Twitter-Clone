@@ -9,6 +9,9 @@ comments_routes = Blueprint('comments', __name__)
 @comments_routes.route('/')
 @login_required
 def get_all_comments():
+    """
+    Gets all comments
+    """
     comments = Comment.query.all()
     response = [comment.to_dict() for comment in comments]
     return {'comments': response}
@@ -16,6 +19,9 @@ def get_all_comments():
 @comments_routes.route('/<int:postId>')
 @login_required
 def get_all_comments_by_post_id(postId):
+    """
+    Gets all comments from a particular tweet post id
+    """
     comments = Comment.query.filter(Comment.post_id == postId).all()
     response = [comment.to_dict() for comment in comments]
     return {'comments': response}
@@ -24,6 +30,9 @@ def get_all_comments_by_post_id(postId):
 @comments_routes.route('/create/<int:postId>', methods=["POST"])
 @login_required
 def create_comment(postId):
+    """
+    Creates a comment to a particular post with it's id
+    """
     post = Post.query.get(postId)
     form = CommentsForm()
     form['csrf_token'].data = request.cookies['csrf_token']
@@ -43,6 +52,9 @@ def create_comment(postId):
 @comments_routes.route('/update/<id>', methods=["PUT"])
 @login_required
 def update_comment_by_id(id):
+    """
+    Allows for editing of a comment 
+    """
     comment = Comment.query.get(id)
     form = CommentsForm()
     form['csrf_token'].data = request.cookies['csrf_token']
@@ -59,6 +71,9 @@ def update_comment_by_id(id):
 @comments_routes.route('/<id>', methods=["DELETE"])
 @login_required
 def delete_comment_by_id(id):
+    """
+    Deletes a comment
+    """
     comment = Comment.query.get_or_404(id)
     db.session.delete(comment)
     db.session.commit()

@@ -39,6 +39,7 @@ def editUser2(id):
         return user.to_dict()
     # return {'errors': validation_errors_to_error_messages(form.errors)}, 401
 
+#Get's a user's likes
 @user_routes.route('/<int:id>/likes')
 @login_required
 def user_likes(id):

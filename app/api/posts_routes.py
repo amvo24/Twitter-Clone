@@ -10,6 +10,9 @@ posts_routes = Blueprint('posts', __name__)
 @posts_routes.route('/')
 @login_required
 def get_all_posts():
+    """
+    Gets all posts
+    """
     posts = Post.query.all()
     response = [post.to_dict() for post in posts]
     return {'posts': response}
@@ -18,6 +21,9 @@ def get_all_posts():
 @posts_routes.route('/create', methods=["POST"])
 @login_required
 def create_post():
+    """
+    Creates a post
+    """
     form = PostForm()
     form['csrf_token'].data = request.cookies['csrf_token']
     if form.validate_on_submit():
@@ -35,6 +41,9 @@ def create_post():
 @posts_routes.route('/<id>')
 @login_required
 def get_post_by_id(id):
+    """
+    Gets a particular post by it's id
+    """
     post = Post.query.get_or_404(id)
     return post.to_dict()
 
@@ -42,6 +51,9 @@ def get_post_by_id(id):
 @posts_routes.route('/update/<int:id>', methods=["PUT"])
 @login_required
 def update_post_by_id(id):
+    """
+    Edits a post
+    """
     post = Post.query.get(id)
     form = PostForm()
     form['csrf_token'].data = request.cookies['csrf_token']
@@ -56,6 +68,9 @@ def update_post_by_id(id):
 @posts_routes.route('/<int:id>', methods=["DELETE"])
 @login_required
 def delete_post_by_id(id):
+    """
+    Deltes a post
+    """
     post = Post.query.get_or_404(id)
     db.session.delete(post)
     db.session.commit()

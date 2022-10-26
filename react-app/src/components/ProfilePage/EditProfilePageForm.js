@@ -6,7 +6,7 @@ import './EditProfileForm.css'
 
 
 
-const EditProfileForm = ({user}) => {
+const EditProfileForm = ({setShowModal, user}) => {
   const [errors, setErrors] = useState([]);
   const [banner_pic, setBanner_pic] = useState(user.banner_pic);
   const [profile_pic, setProfile_pic] = useState(user.profile_pic);
@@ -29,13 +29,8 @@ const EditProfileForm = ({user}) => {
             bio
         }
 
-        return dispatch(editAUser(editedUser, id))
-        .then(() => {
-          history.push(`/users/${id}`)
-        })
-        // if (data) {
-        //     setErrors(data)
-        // }
+        dispatch(editAUser(editedUser, id))
+        setShowModal(false)
   };
 
   const updateBanner_pic = (e) => {
@@ -54,10 +49,6 @@ const EditProfileForm = ({user}) => {
     setBio(e.target.value);
   };
 
-
-//   if (user) {
-//     return <Redirect to='/home' />;
-//   }
 
   return (
     <form className='EditForm_123890' onSubmit={onEditSubmit}>

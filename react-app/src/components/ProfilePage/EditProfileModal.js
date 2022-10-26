@@ -33,7 +33,7 @@ function EditProfileModal({user}) {
                             </div>
                     </div>
                     <div className="EditPMForm">
-                    <EditProfileForm user={user}/>
+                    <EditProfileForm setShowModal={setShowModal} user={user}/>
                     </div>
                     
                 </div>
