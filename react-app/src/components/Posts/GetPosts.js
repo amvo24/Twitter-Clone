@@ -17,7 +17,9 @@ function GetPosts() {
   const commentArray = Object.values(comments).reverse()
   const [users, setUsers] = useState([])
 
-
+  const handleClick = () => {
+    alert('This feature will be coming soon!')
+  }
 
   useEffect(() => {
     async function fetchData() {
@@ -45,7 +47,6 @@ function GetPosts() {
     <>
       <div>
         {postsArray.map((post) => (
-
           <div className="TweetContainer" key={post?.id}>
             <Link to={`./post/${post?.id}`} className="TweetLink">
               <div className="TweetUserContainer">
@@ -94,7 +95,23 @@ function GetPosts() {
                   {commentArray.filter((comment) => comment.post?.id === post?.id).length}
                   </div>
               </div>
-              <div className="TweetRetweetsButton">RETWEETS</div>
+              <div className="TweetRetweetsButton">
+                <svg
+                  onClick={handleClick} 
+                  xmlnsXlink="http://www.w3.org/1999/xlink" 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  viewBox="0 0 24 24" 
+                  aria-hidden="true" 
+                  class="r-4qtqp9 r-yyyyoo r-1xvli5t r-dnmrzs r-bnwqim r-1plcrui r-lrvibr r-1hdv0qi" 
+                  width="25" 
+                  height="25"><g 
+                  fill="#536471"><path 
+                  d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55V16c0 1.1.896 2 2 2H13v2H7.5c-2.209 0-4-1.79-4-4V7.55L1.432 9.48.068 8.02 4.5 3.88zM16.5 6H11V4h5.5c2.209 0 4 1.79 4 4v8.45l2.068-1.93 1.364 1.46-4.432 4.14-4.432-4.14 1.364-1.46 2.068 1.93V8c0-1.1-.896-2-2-2z" 
+                  fill="#536471"
+                  ></path>
+                  </g>
+                </svg>
+              </div>
               {/* LIKES */}
               <Likes post={post} />
               <div className='DeleteOrShareContainer'>

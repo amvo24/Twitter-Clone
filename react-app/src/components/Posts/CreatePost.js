@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux'
 import { createOnePost } from '../../store/posts';
 import { Link } from 'react-router-dom'
@@ -6,6 +7,7 @@ import './CreatePost.css'
 
 
 const CreatePost = () => {
+  const history = useHistory()
   const dispatch = useDispatch();
   const user = useSelector((state) => state.session.user)
   const [errors, setErrors] = useState([]);
@@ -26,6 +28,7 @@ const CreatePost = () => {
       if (data) {
         setErrors(data)
       }
+      history.push(`/`)
   };
 
   const updateBody = (e) => {

@@ -1,0 +1,55 @@
+.usersList {
+    list-style: none;
+}
+
+.IndividualUserContainer {
+    /* background-color: red; */
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.IndividualUserContainer:hover {
+    background-color: rgb(240, 240, 240);
+    cursor: pointer;
+}
+
+.ULLink_048 {
+    color: black;
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+}
+
+.PFUserListUserInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 10px;
+    /* background-color: blue; */
+}
+
+.PFPic {
+    height: 70px;
+    width: 70px;
+}
+
+.PFPic_2308 {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.UserListName {
+    font-weight: bold;
+}
+
+.UserListUsername {
+    color: rgb(94, 93, 93);
+}
+
+.UserListDescription {
+    margin-top: 5px;
+}

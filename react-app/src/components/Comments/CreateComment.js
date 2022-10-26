@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {useHistory} from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { createOneComment } from '../../store/comments';
 import './CreateComment.css'
@@ -6,6 +7,7 @@ import './CreateComment.css'
 
 
 const CreateComment = ({id}) => {
+  const history = useHistory()
   const dispatch = useDispatch();
   const user = useSelector((state) => state.session.user)
   const comment = useSelector((state) => state.comments)
@@ -25,6 +27,7 @@ const CreateComment = ({id}) => {
       if (data) {
         setErrors(data)
       }
+      history.push(`./post/${id}`)
   };
 
   const updateBody = (e) => {
