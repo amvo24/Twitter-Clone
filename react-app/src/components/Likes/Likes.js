@@ -29,15 +29,9 @@ function Likes({post}) {
     }
 
 
-    // const handleLikeClick = () => {
-    //     if (clicked) {
-    //         setLiked(liked -= 1)
-    //     } else {
-    //         setLiked(liked += 1)
-    //     }
-    //     setClicked(!clicked)
-
-    // }
+    const handleClick = () => {
+      alert('This feature will be coming soon!')
+    }
 
     return (
       <>
@@ -45,7 +39,7 @@ function Likes({post}) {
           <div className="buttonAndAmountcontainer">
             <div className="HeartBackgroundCircle">
               <svg
-                onClick={handleLike}
+                onClick={handleClick}
                 xmlnsXlink="http://www.w3.org/1999/xlink"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
