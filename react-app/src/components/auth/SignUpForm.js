@@ -107,7 +107,9 @@ const SignUpForm = () => {
             <div class="content-name">Email</div>
         </label>
       </div>
-      <div className='outerDivSUF'>
+      {/* Birthday currently in development, looking to add a calendar drop down
+      in the sign-up form */}
+      {/* <div className='outerDivSUF'>
         <input
           type=''
           name='birthday'
@@ -118,7 +120,7 @@ const SignUpForm = () => {
         <label for='username' class='label-name'>
             <div class="content-name">Birthday</div>
         </label>
-      </div>
+      </div> */}
       <div className='outerDivSUF'>
         <input
           type='password'
