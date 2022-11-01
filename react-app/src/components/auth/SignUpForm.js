@@ -21,7 +21,8 @@ const SignUpForm = () => {
   const onSignUp = async (e) => {
     e.preventDefault();
     if (password === repeatPassword) {
-      const data = await dispatch(signUp(username, email, password));
+      const data = await dispatch(signUp(name, username, email, password));
+      
       if (data) {
         setErrors(data)
       }
@@ -48,7 +49,7 @@ const SignUpForm = () => {
   };
 
   const updateBirthday = (e) => {
-    setEmail(e.target.value);
+    setBirthday(e.target.value);
   };
 
   const updatePassword = (e) => {
@@ -115,7 +116,7 @@ const SignUpForm = () => {
           name='birthday'
           required
           onChange={updateBirthday}
-          value={email}
+          value={birthday}
         ></input>
         <label for='username' class='label-name'>
             <div class="content-name">Birthday</div>
@@ -139,7 +140,7 @@ const SignUpForm = () => {
           name='repeat_password'
           onChange={updateRepeatPassword}
           value={repeatPassword}
-          required={true}
+          required
         ></input>
         <label for='username' class='label-name'>
             <div class="content-name">Repeat Password</div>

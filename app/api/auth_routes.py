@@ -69,7 +69,7 @@ def sign_up():
             email=form.data['email'],
             password=form.data['password'],
             joined=datetime.now(),
-            birthday=datetime.now(),
+            # birthday=datetime.now(),
         )
         db.session.add(user)
         db.session.commit()

@@ -6,7 +6,7 @@ class UserForm(FlaskForm):
     profile_pic = StringField('profile_pic')
     banner_pic = StringField('banner_pic')
     bio = StringField('bio')
-    birthday = DateField('birthday')
+    # birthday = DateField('birthday')
     username = StringField('username')
     email = StringField('email')
     password = StringField('password')

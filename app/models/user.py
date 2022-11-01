@@ -15,9 +15,9 @@ class User(db.Model, UserMixin):
     profile_pic = db.Column(db.String, nullable=True)
     banner_pic = db.Column(db.String, nullable=True)
     bio = db.Column(db.String(140), nullable=True)
-    birthday = db.Column(db.DateTime, nullable=False)
+    # birthday = db.Column(db.DateTime, nullable=False)
     joined = db.Column(db.DateTime, nullable=False)
-    place = db.Column(db.String, nullable=False)
+    place = db.Column(db.String, nullable=True)
 
 
     post = db.relationship("Post", back_populates="userObject", cascade='all, delete')
@@ -48,7 +48,7 @@ class User(db.Model, UserMixin):
             'profile_pic': self.profile_pic,
             'banner_pic': self.banner_pic,
             'bio': self.bio,
-            'birthday': str(self.birthday),
+            # 'birthday': str(self.birthday),
             'joined': self.joined,
             'place': self.place,
         }

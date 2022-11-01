@@ -4,47 +4,47 @@ from datetime import datetime
 
 # Adds a demo user, you can add other users here if you want
 def seed_posts():
-    sephiroth = User(
+    user1 = User(
         profile_pic='https://static1.cbrimages.com/wordpress/wp-content/uploads/2022/02/Sephiroth-Final-Fantasy.jpg',
-        name='Sephiroth',
-        username='OneWingedAngel',
-        email='seph@aa.io',
+        name='Dylan',
+        username='Gymrat23',
+        email='dylan@aa.io',
         password='password',
-        bio='The Reunion Is Nothing To Fear.',
+        bio='Gym lover',
         place='New York City, New York',
-        birthday=datetime(1990, 10, 11),
+        # birthday=datetime(1990, 10, 11),
         banner_pic='https://static1.srcdn.com/wordpress/wp-content/uploads/2020/03/Sephiroth-Midgar-Cover-Final-Fantasy-VII-Remake.jpg',
         joined=datetime(2010, 5, 8)
         )
 
-    tifa = User(
+    user2 = User(
         profile_pic='https://oyster.ignimgs.com/mediawiki/apis.ign.com/final-fantasy-vii-remake/9/94/Final-Fantasy-VII-Remake-Tifa.jpg',
-        name='Tifa',
-        username='glovegirl',
-        email='Tifa@aa.io',
+        name='Isabel',
+        username='skatergurl5',
+        email='izzy@aa.io',
         password='password',
-        birthday=datetime(1995, 8, 20),
-        place='Midgar',
-        bio="I'll Be Fine. You've Seen How Much Ass I Can Kick.",
+        # birthday=datetime(1995, 8, 20),
+        place='Houston',
+        bio="I love to skate and I love my dog!",
         banner_pic='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1f8d9181-e997-4dbf-a95b-4bed86f14cca/defhkep-1ade3238-febc-4a95-950d-6a03f2b9ef7e.jpg',
         joined=datetime(2009, 10, 28)
         )
-    aerith = User(
+    user3 = User(
         profile_pic='https://d3fd5j8wprxn3h.cloudfront.net/wp-content/uploads/2020/04/final-fantasy-7-remake-aerith-final-fantasy-vii-remake-aerith.jpg',
-        name='Aerith',
-        username='LastoftheCetra',
-        email='aerith@aa.io',
+        name='Nicole',
+        username='theatergal4',
+        email='nicky@aa.io',
         password='password',
-        place='Midgar',
-        birthday=datetime(1996, 7, 10),
-        bio='We Need To Make The Most Of The Time We Have. To Live Our Lives The Way We Wanna Live.n',
+        place='Austin',
+        # birthday=datetime(1996, 7, 10),
+        bio='Theater is life, my favorite musical is wicked!',
         joined=datetime(2015, 10, 16),
         banner_pic='https://cdn.gamer-network.net/2020/usgamer/Final-Fantasy-7-Remake_Post-Review_Screenshot11.jpg'
         )
 
-    db.session.add(sephiroth)
-    db.session.add(tifa)
-    db.session.add(aerith)
+    db.session.add(user1)
+    db.session.add(user2)
+    db.session.add(user3)
 
 
 
