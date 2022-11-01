@@ -31,13 +31,13 @@ def seed_users():
         )
     bobbie = User(
         profile_pic='https://i1.wp.com/www.brainpickings.org/wp-content/uploads/2014/05/bobdylan1.jpg',
-        name='Bob Dylan',
-        username='bobbie',
-        email='bobbie@aa.io',
+        name='Andy Lam',
+        username='dandyAndy',
+        email='Andy@aa.io',
         password='password',
         place='Los Angeles, CA',
         # birthday=datetime(1998, 12, 20),
-        bio='The times, theyre a changin',
+        bio='probably at home watching netflix',
         joined=datetime(2019, 7, 18),
         banner_pic='https://res.cloudinary.com/dk-find-out/image/upload/q_80,w_1920,f_auto/DCTM_Penguin_UK_DK_AL1007936_rt_q2qwiw.jpg'
         )
